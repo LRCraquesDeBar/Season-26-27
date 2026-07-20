@@ -3,216 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liga Record - Craques do Bar</title>
+<title>Tabela da Liga</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
-    background:#eef2f5;
-}
-
-header{
-    background:#0d47a1;
-    color:white;
-    text-align:center;
-    padding:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.3);
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:30px;
 }
 
 .container{
-    width:95%;
-    max-width:1200px;
-    margin:30px auto;
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:25px;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    background:white;
+    background:#fff;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 thead{
-    background:#1565c0;
+    background:#0d47a1;
     color:white;
 }
 
 th, td{
-    padding:14px;
+    padding:15px;
     text-align:center;
-}
-
-tbody tr:nth-child(even){
-    background:#f5f5f5;
+    border-bottom:1px solid #ddd;
 }
 
 tbody tr:hover{
-    background:#dbe9ff;
+    background:#f1f7ff;
 }
 
-.pos{
+.equipa{
+    text-align:left;
     font-weight:bold;
 }
 
-.champion{
-    background:#c8e6c9 !important;
+.subida{
+    color:green;
+    font-size:24px;
 }
 
-.europe{
-    background:#dcedc8 !important;
+.descida{
+    color:red;
+    font-size:24px;
 }
 
-.relegation{
-    background:#ffcdd2 !important;
-}
-
-footer{
-    margin-top:20px;
-    text-align:center;
-    color:#666;
-    padding:15px;
+.mantem{
+    color:gray;
+    font-size:24px;
 }
 </style>
 
 </head>
 <body>
 
-<header>
-    <h1>🏆 Liga de Futebol</h1>
-    <p>Época 2026/2027</p>
-</header>
-
 <div class="container">
+
+<h1>🏆 Classificação da Liga</h1>
 
 <table>
 
 <thead>
 <tr>
-<th>Pos</th>
-<th>Equipa</th>
-<th>J</th>
-<th>V</th>
-<th>E</th>
-<th>D</th>
-<th>GM</th>
-<th>GS</th>
-<th>DG</th>
-<th>Pts</th>
+    <th>Equipa</th>
+    <th>Jornadas</th>
+    <th>MVP da Jornada</th>
+    <th>Posição</th>
 </tr>
 </thead>
 
 <tbody>
 
-<tr class="champion">
-<td class="pos">1</td>
-<td>FC Porto</td>
-<td>10</td>
-<td>8</td>
-<td>1</td>
-<td>1</td>
-<td>24</td>
-<td>9</td>
-<td>+15</td>
-<td><strong>25</strong></td>
-</tr>
-
-<tr class="europe">
-<td class="pos">2</td>
-<td>Sporting CP</td>
-<td>10</td>
-<td>7</td>
-<td>2</td>
-<td>1</td>
-<td>22</td>
-<td>10</td>
-<td>+12</td>
-<td><strong>23</strong></td>
-</tr>
-
-<tr class="europe">
-<td class="pos">3</td>
-<td>SL Benfica</td>
-<td>10</td>
-<td>7</td>
-<td>1</td>
-<td>2</td>
-<td>20</td>
-<td>11</td>
-<td>+9</td>
-<td><strong>22</strong></td>
+<tr>
+    <td class="equipa">FC Porto</td>
+    <td>12</td>
+    <td>4</td>
+    <td class="subida">⬆️</td>
 </tr>
 
 <tr>
-<td class="pos">4</td>
-<td>SC Braga</td>
-<td>10</td>
-<td>6</td>
-<td>2</td>
-<td>2</td>
-<td>19</td>
-<td>12</td>
-<td>+7</td>
-<td>20</td>
+    <td class="equipa">Sporting CP</td>
+    <td>12</td>
+    <td>3</td>
+    <td class="mantem">➖</td>
 </tr>
 
 <tr>
-<td class="pos">5</td>
-<td>Vitória SC</td>
-<td>10</td>
-<td>5</td>
-<td>3</td>
-<td>2</td>
-<td>16</td>
-<td>11</td>
-<td>+5</td>
-<td>18</td>
+    <td class="equipa">SL Benfica</td>
+    <td>12</td>
+    <td>2</td>
+    <td class="descida">⬇️</td>
 </tr>
 
 <tr>
-<td class="pos">6</td>
-<td>Boavista</td>
-<td>10</td>
-<td>4</td>
-<td>2</td>
-<td>4</td>
-<td>14</td>
-<td>15</td>
-<td>-1</td>
-<td>14</td>
+    <td class="equipa">SC Braga</td>
+    <td>12</td>
+    <td>1</td>
+    <td class="subida">⬆️</td>
 </tr>
 
 <tr>
-<td class="pos">7</td>
-<td>Casa Pia</td>
-<td>10</td>
-<td>3</td>
-<td>3</td>
-<td>4</td>
-<td>12</td>
-<td>15</td>
-<td>-3</td>
-<td>12</td>
-</tr>
-
-<tr class="relegation">
-<td class="pos">8</td>
-<td>Estrela Amadora</td>
-<td>10</td>
-<td>2</td>
-<td>2</td>
-<td>6</td>
-<td>10</td>
-<td>20</td>
-<td>-10</td>
-<td>8</td>
+    <td class="equipa">Vitória SC</td>
+    <td>12</td>
+    <td>0</td>
+    <td class="mantem">➖</td>
 </tr>
 
 </tbody>
@@ -220,10 +129,6 @@ footer{
 </table>
 
 </div>
-
-<footer>
-© 2026 Liga de Futebol
-</footer>
 
 </body>
 </html>
