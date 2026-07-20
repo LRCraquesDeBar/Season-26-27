@@ -3,49 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tabela da Liga</title>
+<title>Liga de Futebol</title>
 
 <style>
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f6f9;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f5;
     margin:0;
     padding:30px;
 }
 
 .container{
-    max-width:900px;
+    max-width:1100px;
     margin:auto;
 }
 
 h1{
     text-align:center;
     color:#0d47a1;
-    margin-bottom:25px;
+    margin-bottom:40px;
+}
+
+h2{
+    color:#0d47a1;
+    margin-top:40px;
+    margin-bottom:15px;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    background:#fff;
+    background:white;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-bottom:35px;
 }
 
 thead{
-    background:#0d47a1;
+    background:#1565c0;
     color:white;
 }
 
-th, td{
-    padding:15px;
+th,td{
+    padding:14px;
     text-align:center;
     border-bottom:1px solid #ddd;
 }
 
 tbody tr:hover{
-    background:#f1f7ff;
+    background:#eef5ff;
 }
 
 .equipa{
@@ -54,18 +61,22 @@ tbody tr:hover{
 }
 
 .subida{
-    color:green;
-    font-size:24px;
+    color:#2e7d32;
+    font-size:22px;
 }
 
 .descida{
-    color:red;
-    font-size:24px;
+    color:#c62828;
+    font-size:22px;
 }
 
 .mantem{
-    color:gray;
-    font-size:24px;
+    color:#757575;
+    font-size:22px;
+}
+
+.pontos{
+    font-weight:bold;
 }
 </style>
 
@@ -74,16 +85,20 @@ tbody tr:hover{
 
 <div class="container">
 
-<h1>🏆 Classificação da Liga</h1>
+<h1>🏆 Liga de Futebol</h1>
+
+<!-- PRIMEIRA DIVISÃO -->
+<h2>Primeira Divisão</h2>
 
 <table>
 
 <thead>
 <tr>
     <th>Equipa</th>
+    <th>Pontos</th>
     <th>Jornadas</th>
     <th>MVP da Jornada</th>
-    <th>Posição</th>
+    <th>Tendência</th>
 </tr>
 </thead>
 
@@ -91,6 +106,7 @@ tbody tr:hover{
 
 <tr>
     <td class="equipa">FC Porto</td>
+    <td class="pontos">32</td>
     <td>12</td>
     <td>4</td>
     <td class="subida">⬆️</td>
@@ -98,6 +114,7 @@ tbody tr:hover{
 
 <tr>
     <td class="equipa">Sporting CP</td>
+    <td class="pontos">30</td>
     <td>12</td>
     <td>3</td>
     <td class="mantem">➖</td>
@@ -105,6 +122,7 @@ tbody tr:hover{
 
 <tr>
     <td class="equipa">SL Benfica</td>
+    <td class="pontos">28</td>
     <td>12</td>
     <td>2</td>
     <td class="descida">⬇️</td>
@@ -112,6 +130,7 @@ tbody tr:hover{
 
 <tr>
     <td class="equipa">SC Braga</td>
+    <td class="pontos">24</td>
     <td>12</td>
     <td>1</td>
     <td class="subida">⬆️</td>
@@ -119,6 +138,68 @@ tbody tr:hover{
 
 <tr>
     <td class="equipa">Vitória SC</td>
+    <td class="pontos">20</td>
+    <td>12</td>
+    <td>1</td>
+    <td class="mantem">➖</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<!-- SEGUNDA DIVISÃO -->
+<h2>Segunda Divisão</h2>
+
+<table>
+
+<thead>
+<tr>
+    <th>Equipa</th>
+    <th>Pontos</th>
+    <th>Jornadas</th>
+    <th>MVP da Jornada</th>
+    <th>Tendência</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td class="equipa">Académica</td>
+    <td class="pontos">29</td>
+    <td>12</td>
+    <td>3</td>
+    <td class="subida">⬆️</td>
+</tr>
+
+<tr>
+    <td class="equipa">Leixões</td>
+    <td class="pontos">27</td>
+    <td>12</td>
+    <td>2</td>
+    <td class="mantem">➖</td>
+</tr>
+
+<tr>
+    <td class="equipa">Feirense</td>
+    <td class="pontos">25</td>
+    <td>12</td>
+    <td>2</td>
+    <td class="subida">⬆️</td>
+</tr>
+
+<tr>
+    <td class="equipa">Penafiel</td>
+    <td class="pontos">22</td>
+    <td>12</td>
+    <td>1</td>
+    <td class="descida">⬇️</td>
+</tr>
+
+<tr>
+    <td class="equipa">Oliveirense</td>
+    <td class="pontos">18</td>
     <td>12</td>
     <td>0</td>
     <td class="mantem">➖</td>
