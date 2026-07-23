@@ -150,29 +150,29 @@ body {
 
 .legend-champion {
 
-    background: #fef3c7;
-    color: #92400e;
+    background: #facc15;
+    color: #713f12;
 
 }
 
 .legend-top {
 
-    background: #dcfce7;
-    color: #166534;
+    background: #86efac;
+    color: #14532d;
 
 }
 
 .legend-playoff {
 
-    background: #ffedd5;
-    color: #9a3412;
+    background: #fdba74;
+    color: #7c2d12;
 
 }
 
 .legend-relegation {
 
-    background: #fee2e2;
-    color: #991b1b;
+    background: #fca5a5;
+    color: #7f1d1d;
 
 }
 
@@ -399,7 +399,8 @@ td:last-child {
 
 .champion td {
 
-    background: #fef3c7;
+    background: #facc15;
+    color: #713f12;
 
 }
 
@@ -408,7 +409,8 @@ td:last-child {
 
 .top td {
 
-    background: #dcfce7;
+    background: #86efac;
+    color: #14532d;
 
 }
 
@@ -417,7 +419,8 @@ td:last-child {
 
 .playoff td {
 
-    background: #ffedd5;
+    background: #fdba74;
+    color: #7c2d12;
 
 }
 
@@ -426,7 +429,8 @@ td:last-child {
 
 .relegation td {
 
-    background: #fee2e2;
+    background: #fca5a5;
+    color: #7f1d1d;
 
 }
 
@@ -713,6 +717,51 @@ td:last-child {
 
 }
 
+/* =========================
+   VÁRIAS IMAGENS NO MODAL
+========================= */
+
+.modal-images {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    max-height: 82vh;
+
+    overflow-y: auto;
+
+    padding: 10px;
+
+}
+
+.modal-images img {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 75vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+
+    background: white;
+
+}
+
 
 /* BOTÃO FECHAR */
 
@@ -877,7 +926,14 @@ footer {
 
     }
 
-    .modal-content img {
+    .modal-content img,
+    .modal-images img {
+
+        max-height: 75vh;
+
+    }
+
+    .modal-images {
 
         max-height: 75vh;
 
@@ -1798,9 +1854,7 @@ footer {
 
 <div
     class="history-item"
-    data-image="img25-26/LigaRecord2526.png"
-    data-image="img25-26/FinalEpoca25-26.png"
-    data-image="img25-26/Campeao25-26.png"
+    data-images="img25-26/LigaRecord2526.png,img25-26/FinalEpoca25-26.png,img25-26/Campeao25-26.png"
     data-title="Classificação da época 2025/2026"
 >
 
@@ -1878,11 +1932,9 @@ footer {
 </button>
 
 
-<img
-    id="historyImage"
-    src=""
-    alt="Classificação histórica"
->
+<div class="modal-images" id="modalImages">
+    <!-- As imagens serão adicionadas aqui pelo JavaScript -->
+</div>
 
 
 <div
@@ -1997,8 +2049,8 @@ leagueRows.forEach(row => {
 const modal =
     document.getElementById("historyModal");
 
-const historyImage =
-    document.getElementById("historyImage");
+const modalImages =
+    document.getElementById("modalImages");
 
 const modalTitle =
     document.getElementById("modalTitle");
@@ -2023,24 +2075,79 @@ historyItems.forEach(item => {
 
     item.addEventListener("click", function() {
 
-        const image =
+        const images =
+            this.getAttribute("data-images");
+
+        const singleImage =
             this.getAttribute("data-image");
 
         const title =
             this.getAttribute("data-title");
 
 
-        historyImage.src = image;
+        /* LIMPAR IMAGENS ANTERIORES */
 
-        historyImage.alt = title;
+        modalImages.innerHTML = "";
 
-        modalTitle.textContent = title;
+
+        /*
+           SE EXISTIREM VÁRIAS IMAGENS
+           SEPARADAS POR VÍRGULAS
+        */
+
+        if (images) {
+
+            const imageList =
+                images.split(",");
+
+            imageList.forEach(imagePath => {
+
+                const img =
+                    document.createElement("img");
+
+                img.src =
+                    imagePath.trim();
+
+                img.alt =
+                    title;
+
+                modalImages.appendChild(img);
+
+            });
+
+        }
+
+
+        /*
+           COMPATIBILIDADE COM OS CARDS
+           QUE AINDA TÊM APENAS UMA IMAGEM
+        */
+
+        else if (singleImage) {
+
+            const img =
+                document.createElement("img");
+
+            img.src =
+                singleImage;
+
+            img.alt =
+                title;
+
+            modalImages.appendChild(img);
+
+        }
+
+
+        modalTitle.textContent =
+            title;
 
 
         modal.classList.add("active");
 
 
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow =
+            "hidden";
 
     });
 
@@ -2055,7 +2162,7 @@ function fecharModal() {
 
     modal.classList.remove("active");
 
-    historyImage.src = "";
+    modalImages.innerHTML = "";
 
     document.body.style.overflow = "";
 
