@@ -2812,6 +2812,38 @@ document.addEventListener(
 );
 
 
+/* =========================
+   OBs. Automáticas
+========================= */
+
+   
+   document.querySelectorAll("tr[data-posicao]").forEach(linha => {
+
+    const posicao = Number(linha.dataset.posicao);
+    const observacoes = linha.querySelector(".observacoes");
+
+    if (!observacoes) return;
+
+    if (posicao === 1) {
+        observacoes.textContent = "Prémio: 1€";
+    }
+
+    else if (posicao === 2) {
+        observacoes.textContent = "Prémio: 0,50€";
+    }
+
+    else if (posicao === 13) {
+        observacoes.textContent = "Playoff";
+    }
+
+    else if (posicao === 14 || posicao === 15) {
+        observacoes.textContent = "Despromoção";
+    }
+
+});
+
+
+
 </script>
 
 </body>
