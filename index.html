@@ -857,29 +857,47 @@ footer {
 
 
 /* =========================
-SCROLL LIGA DE HONRA
+   SCROLL LIGA DE HONRA
 ========================= */
 
 .honra-table-wrapper {
 
-```
-width: 100%;
+    width: 100%;
 
-overflow-x: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 
--webkit-overflow-scrolling: touch;
-```
+    -webkit-overflow-scrolling: touch;
+
+    position: relative;
+
+    margin-bottom: 30px;
 
 }
 
+
 /* Mantém a tabela com largura suficiente
-para as 10 colunas */
+   para as 10 colunas */
 
 .honra-table-wrapper table {
 
-```
-min-width: 900px;
-```
+    min-width: 900px;
+
+}
+
+
+/* =========================
+   GARANTE QUE O ARQUIVO
+   FICA ABAIXO DA LIGA DE HONRA
+========================= */
+
+.history-card {
+
+    position: relative;
+
+    clear: both;
+
+    margin-top: 30px;
 
 }
 
@@ -889,21 +907,25 @@ MOBILE
 
 @media (max-width: 700px) {
 
-```
-.honra-table-wrapper {
+    .honra-table-wrapper {
 
-    overflow-x: auto;
+        width: 100%;
 
-    padding-bottom: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
 
-}
+        -webkit-overflow-scrolling: touch;
 
-.honra-table-wrapper table {
+        padding-bottom: 8px;
 
-    min-width: 900px;
+    }
 
-}
-```
+
+    .honra-table-wrapper table {
+
+        min-width: 900px;
+
+    }
 
 }
 
