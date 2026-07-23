@@ -857,6 +857,58 @@ footer {
 
 
 /* =========================
+SCROLL LIGA DE HONRA
+========================= */
+
+.honra-table-wrapper {
+
+```
+width: 100%;
+
+overflow-x: auto;
+
+-webkit-overflow-scrolling: touch;
+```
+
+}
+
+/* Mantém a tabela com largura suficiente
+para as 10 colunas */
+
+.honra-table-wrapper table {
+
+```
+min-width: 900px;
+```
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+```
+.honra-table-wrapper {
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+
+}
+
+.honra-table-wrapper table {
+
+    min-width: 900px;
+
+}
+```
+
+}
+
+   
+/* =========================
    RESPONSIVO
 ========================= */
 
