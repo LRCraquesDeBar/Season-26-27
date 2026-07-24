@@ -73,10 +73,6 @@ body {
 }
 
 
-/* =========================
-   LOGO
-========================= */
-
 .logo {
 
     width: 100px;
@@ -106,6 +102,7 @@ body {
 
 }
 
+
 .header p {
 
     color: #64748b;
@@ -133,6 +130,7 @@ body {
 
 }
 
+
 .legenda span {
 
     padding: 8px 14px;
@@ -146,14 +144,13 @@ body {
 }
 
 
-/* CORES LEGENDA */
-
 .legend-champion {
 
     background: #facc15;
     color: #713f12;
 
 }
+
 
 .legend-top {
 
@@ -162,12 +159,14 @@ body {
 
 }
 
+
 .legend-playoff {
 
     background: #fdba74;
     color: #7c2d12;
 
 }
+
 
 .legend-relegation {
 
@@ -215,6 +214,7 @@ body {
 
 }
 
+
 .league-icon {
 
     width: 45px;
@@ -241,6 +241,7 @@ body {
 
 }
 
+
 .league-title h2 {
 
     font-size: 22px;
@@ -248,6 +249,7 @@ body {
     color: #0f172a;
 
 }
+
 
 .league-title p {
 
@@ -273,8 +275,6 @@ table {
 }
 
 
-/* CABEÇALHO */
-
 thead th {
 
     padding: 12px;
@@ -291,14 +291,13 @@ thead th {
 
 }
 
+
 thead th:first-child {
 
     text-align: center;
 
 }
 
-
-/* LINHAS */
 
 tbody tr {
 
@@ -307,6 +306,7 @@ tbody tr {
         box-shadow 0.2s;
 
 }
+
 
 tbody tr:hover {
 
@@ -328,6 +328,7 @@ td {
 
 }
 
+
 td:first-child {
 
     border-radius: 10px 0 0 10px;
@@ -335,6 +336,7 @@ td:first-child {
     text-align: center;
 
 }
+
 
 td:last-child {
 
@@ -394,9 +396,6 @@ td:last-child {
    CORES DAS CLASSIFICAÇÕES
 ========================= */
 
-
-/* CAMPEÃO */
-
 .champion td {
 
     background: #facc15;
@@ -404,8 +403,6 @@ td:last-child {
 
 }
 
-
-/* 2º AO 5º */
 
 .top td {
 
@@ -415,8 +412,6 @@ td:last-child {
 }
 
 
-/* PLAYOFF */
-
 .playoff td {
 
     background: #fdba74;
@@ -424,8 +419,6 @@ td:last-child {
 
 }
 
-
-/* DESPROMOÇÃO */
 
 .relegation td {
 
@@ -449,17 +442,20 @@ td:last-child {
 
 }
 
+
 .subida {
 
     color: #16a34a;
 
 }
 
+
 .mantem {
 
     color: #94a3b8;
 
 }
+
 
 .descida {
 
@@ -653,8 +649,6 @@ td:last-child {
 }
 
 
-/* CONTEÚDO DO MODAL */
-
 .modal-content {
 
     position: relative;
@@ -691,8 +685,6 @@ td:last-child {
 
 }
 
-
-/* IMAGEM DA CLASSIFICAÇÃO */
 
 .modal-content img {
 
@@ -740,6 +732,7 @@ td:last-child {
 
 }
 
+
 .modal-images img {
 
     display: block;
@@ -764,7 +757,9 @@ td:last-child {
 }
 
 
-/* BOTÃO FECHAR */
+/* =========================
+   BOTÃO FECHAR
+========================= */
 
 .close-modal {
 
@@ -817,7 +812,9 @@ td:last-child {
 }
 
 
-/* TÍTULO DA IMAGEM */
+/* =========================
+   TÍTULO DA IMAGEM
+========================= */
 
 .modal-title {
 
@@ -874,7 +871,37 @@ footer {
 
 .honra-table-wrapper table {
 
-    min-width: 900px;
+    min-width: 1000px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .honra-table-wrapper {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+
+        padding-bottom: 8px;
+
+    }
+
+
+    .honra-table-wrapper table {
+
+        min-width: 1000px;
+
+    }
 
 }
 
@@ -979,6 +1006,10 @@ footer {
 }
 
 
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
 @media (max-width: 450px) {
 
     .history-grid {
@@ -1001,7 +1032,9 @@ footer {
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
@@ -1012,6 +1045,7 @@ footer {
 
 <div class="header">
 
+
 <img
     src="LogoLiga.png"
     alt="Logotipo da Liga"
@@ -1021,6 +1055,7 @@ footer {
 
 <h1>🏆 Liga Record - Craques de Bar</h1>
 
+
 <p>
     Classificação geral da época 2026/2027
 </p>
@@ -1028,23 +1063,29 @@ footer {
 
 <div class="legenda">
 
-    <span class="legend-champion">
-        🥇 Campeão
-    </span>
 
-    <span class="legend-top">
-        🟢 2.º ao 5.º Lugar
-    </span>
+<span class="legend-champion">
+    🥇 Campeão
+</span>
 
-    <span class="legend-playoff">
-        🟠 Playoff
-    </span>
 
-    <span class="legend-relegation">
-        🔴 Despromoção
-    </span>
+<span class="legend-top">
+    🟢 2.º ao 5.º Lugar
+</span>
+
+
+<span class="legend-playoff">
+    🟠 Playoff
+</span>
+
+
+<span class="legend-relegation">
+    🔴 Despromoção
+</span>
+
 
 </div>
+
 
 </div>
 
@@ -1055,40 +1096,56 @@ footer {
 
 <div class="league-card">
 
+
 <div class="league-title">
+
 
 <div class="league-icon">
     🏅
 </div>
 
+
 <div>
 
-    <h2>Primeira Divisão</h2>
 
-    <p>
-        Classificação atual
-    </p>
+<h2>Primeira Divisão</h2>
+
+
+<p>
+    Classificação atual
+</p>
+
 
 </div>
+
 
 </div>
 
 
 <table>
 
+
 <thead>
+
 
 <tr>
 
 <th>Pos.</th>
+
 <th>Equipa</th>
+
 <th>Jornadas</th>
+
 <th>MVP</th>
+
 <th>Pontos</th>
+
 <th>Tendência</th>
+
 <th>Obs.</th>
 
 </tr>
+
 
 </thead>
 
@@ -1096,196 +1153,369 @@ footer {
 <tbody>
 
 
-<tr class="champion" data-posicao="1" data-anterior="1">
+<!-- EQUIPA 1 -->
+
+<tr
+    class="champion"
+    data-posicao="1"
+    data-anterior="1"
+>
 
 <td class="posicao">1</td>
+
 <td class="equipa">Equipa 1</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="top" data-posicao="2" data-anterior="2">
+<!-- EQUIPA 2 -->
+
+<tr
+    class="top"
+    data-posicao="2"
+    data-anterior="2"
+>
 
 <td class="posicao">2</td>
+
 <td class="equipa">Equipa 2</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="top" data-posicao="3" data-anterior="3">
+<!-- EQUIPA 3 -->
+
+<tr
+    class="top"
+    data-posicao="3"
+    data-anterior="3"
+>
 
 <td class="posicao">3</td>
+
 <td class="equipa">Equipa 3</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="top" data-posicao="4" data-anterior="4">
+<!-- EQUIPA 4 -->
+
+<tr
+    class="top"
+    data-posicao="4"
+    data-anterior="4"
+>
 
 <td class="posicao">4</td>
+
 <td class="equipa">Equipa 4</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="top" data-posicao="5" data-anterior="5">
+<!-- EQUIPA 5 -->
+
+<tr
+    class="top"
+    data-posicao="5"
+    data-anterior="5"
+>
 
 <td class="posicao">5</td>
+
 <td class="equipa">Equipa 5</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="6" data-anterior="6">
+<!-- EQUIPA 6 -->
+
+<tr
+    data-posicao="6"
+    data-anterior="6"
+>
 
 <td class="posicao">6</td>
+
 <td class="equipa">Equipa 6</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="7" data-anterior="7">
+<!-- EQUIPA 7 -->
+
+<tr
+    data-posicao="7"
+    data-anterior="7"
+>
 
 <td class="posicao">7</td>
+
 <td class="equipa">Equipa 7</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="8" data-anterior="8">
+<!-- EQUIPA 8 -->
+
+<tr
+    data-posicao="8"
+    data-anterior="8"
+>
 
 <td class="posicao">8</td>
+
 <td class="equipa">Equipa 8</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="9" data-anterior="9">
+<!-- EQUIPA 9 -->
+
+<tr
+    data-posicao="9"
+    data-anterior="9"
+>
 
 <td class="posicao">9</td>
+
 <td class="equipa">Equipa 9</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="10" data-anterior="10">
+<!-- EQUIPA 10 -->
+
+<tr
+    data-posicao="10"
+    data-anterior="10"
+>
 
 <td class="posicao">10</td>
+
 <td class="equipa">Equipa 10</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="11" data-anterior="11">
+<!-- EQUIPA 11 -->
+
+<tr
+    data-posicao="11"
+    data-anterior="11"
+>
 
 <td class="posicao">11</td>
+
 <td class="equipa">Equipa 11</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="12" data-anterior="12">
+<!-- EQUIPA 12 -->
+
+<tr
+    data-posicao="12"
+    data-anterior="12"
+>
 
 <td class="posicao">12</td>
+
 <td class="equipa">Equipa 12</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="playoff" data-posicao="13" data-anterior="13">
+<!-- EQUIPA 13 -->
+
+<tr
+    class="playoff"
+    data-posicao="13"
+    data-anterior="13"
+>
 
 <td class="posicao">13</td>
+
 <td class="equipa">Equipa 13</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="relegation" data-posicao="14" data-anterior="14">
+<!-- EQUIPA 14 -->
+
+<tr
+    class="relegation"
+    data-posicao="14"
+    data-anterior="14"
+>
 
 <td class="posicao">14</td>
+
 <td class="equipa">Equipa 14</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="relegation" data-posicao="15" data-anterior="15">
+<!-- EQUIPA 15 -->
+
+<tr
+    class="relegation"
+    data-posicao="15"
+    data-anterior="15"
+>
 
 <td class="posicao">15</td>
+
 <td class="equipa">Equipa 15</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
@@ -1302,42 +1532,60 @@ footer {
      SEGUNDA DIVISÃO
 ========================= -->
 
-<div class="league-card" id="segunda-divisao">
+<div
+    class="league-card"
+    id="segunda-divisao"
+>
+
 
 <div class="league-title">
+
 
 <div class="league-icon">
     🥈
 </div>
 
+
 <div>
 
 <h2>Segunda Divisão</h2>
+
 
 <p>
     Classificação atual
 </p>
 
+
 </div>
+
 
 </div>
 
 
 <table>
 
+
 <thead>
+
 
 <tr>
 
 <th>Pos.</th>
+
 <th>Equipa</th>
+
 <th>Jornadas</th>
+
 <th>MVP</th>
+
 <th>Pontos</th>
+
 <th>Tendência</th>
+
 <th>Obs.</th>
 
 </tr>
+
 
 </thead>
 
@@ -1345,131 +1593,246 @@ footer {
 <tbody>
 
 
-<tr class="champion" data-posicao="1" data-anterior="1">
+<!-- EQUIPA 1 -->
+
+<tr
+    class="champion"
+    data-posicao="1"
+    data-anterior="1"
+>
 
 <td class="posicao">1</td>
+
 <td class="equipa">Equipa 1</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="top" data-posicao="2" data-anterior="2">
+<!-- EQUIPA 2 -->
+
+<tr
+    class="top"
+    data-posicao="2"
+    data-anterior="2"
+>
 
 <td class="posicao">2</td>
+
 <td class="equipa">Equipa 2</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="playoff" data-posicao="3" data-anterior="3">
+<!-- EQUIPA 3 -->
+
+<tr
+    class="playoff"
+    data-posicao="3"
+    data-anterior="3"
+>
 
 <td class="posicao">3</td>
+
 <td class="equipa">Equipa 3</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="4" data-anterior="4">
+<!-- EQUIPA 4 -->
+
+<tr
+    data-posicao="4"
+    data-anterior="4"
+>
 
 <td class="posicao">4</td>
+
 <td class="equipa">Equipa 4</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="5" data-anterior="5">
+<!-- EQUIPA 5 -->
+
+<tr
+    data-posicao="5"
+    data-anterior="5"
+>
 
 <td class="posicao">5</td>
+
 <td class="equipa">Equipa 5</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="6" data-anterior="6">
+<!-- EQUIPA 6 -->
+
+<tr
+    data-posicao="6"
+    data-anterior="6"
+>
 
 <td class="posicao">6</td>
+
 <td class="equipa">Equipa 6</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="7" data-anterior="7">
+<!-- EQUIPA 7 -->
+
+<tr
+    data-posicao="7"
+    data-anterior="7"
+>
 
 <td class="posicao">7</td>
+
 <td class="equipa">Equipa 7</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr data-posicao="8" data-anterior="8">
+<!-- EQUIPA 8 -->
+
+<tr
+    data-posicao="8"
+    data-anterior="8"
+>
 
 <td class="posicao">8</td>
+
 <td class="equipa">Equipa 8</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="relegation" data-posicao="9" data-anterior="9">
+<!-- EQUIPA 9 -->
+
+<tr
+    class="relegation"
+    data-posicao="9"
+    data-anterior="9"
+>
 
 <td class="posicao">9</td>
+
 <td class="equipa">Equipa 9</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
 
 
-<tr class="relegation" data-posicao="10" data-anterior="10">
+<!-- EQUIPA 10 -->
+
+<tr
+    class="relegation"
+    data-posicao="10"
+    data-anterior="10"
+>
 
 <td class="posicao">10</td>
+
 <td class="equipa">Equipa 10</td>
+
 <td>0</td>
+
 <td>0</td>
+
 <td class="pontos">0</td>
+
 <td class="tendencia"></td>
+
 <td class="observacoes"></td>
 
 </tr>
@@ -1488,45 +1851,66 @@ footer {
 
 <div class="league-card">
 
+
 <div class="league-title">
+
 
 <div class="league-icon">
     🏆
 </div>
 
+
 <div>
 
 <h2>Liga de Honra</h2>
+
 
 <p>
     Histórico geral das equipas
 </p>
 
+
 </div>
+
 
 </div>
 
 
 <div class="honra-table-wrapper">
 
-<table id="liga-honra">
+
+<table>
+
 
 <thead>
+
 
 <tr>
 
 <th>Pos.</th>
+
 <th>Equipa</th>
+
 <th>Part.</th>
+
 <th>1ª Div.</th>
+
 <th>2ª Div.</th>
+
 <th>🏆 Total</th>
+
 <th>🥇 1ª</th>
+
 <th>🥈 1ª</th>
+
 <th>🥇 2ª</th>
+
 <th>🥈 2ª</th>
 
+<th>🔻 Desp.</th>
+
 </tr>
+
 
 </thead>
 
@@ -1534,252 +1918,292 @@ footer {
 <tbody>
 
 
-<tr data-equipa="Equipa 1">
+<!-- EQUIPA 1 -->
+
+<tr>
 
 <td class="posicao">1</td>
 
 <td class="equipa">Equipa 1</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 2">
+<!-- EQUIPA 2 -->
+
+<tr>
 
 <td class="posicao">2</td>
 
 <td class="equipa">Equipa 2</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 3">
+<!-- EQUIPA 3 -->
+
+<tr>
 
 <td class="posicao">3</td>
 
 <td class="equipa">Equipa 3</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 4">
+<!-- EQUIPA 4 -->
+
+<tr>
 
 <td class="posicao">4</td>
 
 <td class="equipa">Equipa 4</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 5">
+<!-- EQUIPA 5 -->
+
+<tr>
 
 <td class="posicao">5</td>
 
 <td class="equipa">Equipa 5</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 6">
+<!-- EQUIPA 6 -->
+
+<tr>
 
 <td class="posicao">6</td>
 
 <td class="equipa">Equipa 6</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 7">
+<!-- EQUIPA 7 -->
+
+<tr>
 
 <td class="posicao">7</td>
 
 <td class="equipa">Equipa 7</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 8">
+<!-- EQUIPA 8 -->
+
+<tr>
 
 <td class="posicao">8</td>
 
 <td class="equipa">Equipa 8</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 9">
+<!-- EQUIPA 9 -->
+
+<tr>
 
 <td class="posicao">9</td>
 
 <td class="equipa">Equipa 9</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
 
-<tr data-equipa="Equipa 10">
+<!-- EQUIPA 10 -->
+
+<tr>
 
 <td class="posicao">10</td>
 
 <td class="equipa">Equipa 10</td>
 
-<td class="participacoes">0</td>
+<td>0</td>
 
-<td class="presencas-1div">0</td>
+<td>0</td>
 
-<td class="presencas-2div">0</td>
+<td>0</td>
 
-<td class="pontos total-titulos">0</td>
+<td class="pontos">0</td>
 
-<td class="titulos-1div">0</td>
+<td>0</td>
 
-<td class="segundos-1div">0</td>
+<td>0</td>
 
-<td class="titulos-2div">0</td>
+<td>0</td>
 
-<td class="segundos-2div">0</td>
+<td>0</td>
+
+<td>0</td>
 
 </tr>
 
@@ -1799,21 +2223,28 @@ footer {
 
 <div class="history-card">
 
+
 <div class="history-title">
+
 
 <div class="history-icon">
     📚
 </div>
 
+
 <div>
 
+
 <h2>ARQUIVO</h2>
+
 
 <p>
     Consulta as classificações das épocas anteriores
 </p>
 
+
 </div>
+
 
 </div>
 
@@ -1821,22 +2252,29 @@ footer {
 <div class="history-grid">
 
 
+<!-- 2025 / 2026 -->
+
 <div
     class="history-item"
     data-images="img25-26/LigaRecord2526.png,img25-26/JantarNatal.jpg,img25-26/Epoca25-26CampeaoInverno.jpg,img25-26/FinalEpoca25-26.jpg,img25-26/Campeao25-26.jpg,"
     data-title="Classificação da época 2025/2026"
 >
 
+
 <span>
     Época 2025/2026
 </span>
+
 
 <span>
     ↗
 </span>
 
+
 </div>
 
+
+<!-- 2024 / 2025 -->
 
 <div
     class="history-item"
@@ -1844,16 +2282,21 @@ footer {
     data-title="Classificação da época 2024/2025"
 >
 
+
 <span>
     Época 2024/2025
 </span>
+
 
 <span>
     ↗
 </span>
 
+
 </div>
 
+
+<!-- 2023 / 2024 -->
 
 <div
     class="history-item"
@@ -1861,13 +2304,16 @@ footer {
     data-title="Classificação da época 2023/2024"
 >
 
+
 <span>
     Época 2023/2024
 </span>
 
+
 <span>
     ↗
 </span>
+
 
 </div>
 
@@ -1881,20 +2327,31 @@ footer {
      MODAL
 ========================= -->
 
-<div class="modal" id="historyModal">
+<div
+    class="modal"
+    id="historyModal"
+>
+
 
 <div class="modal-content">
+
 
 <button
     class="close-modal"
     id="closeModal"
     aria-label="Fechar"
 >
-    ×
+
+×
+
 </button>
 
 
-<div class="modal-images" id="modalImages">
+<div
+    class="modal-images"
+    id="modalImages"
+>
+
 </div>
 
 
@@ -1902,7 +2359,9 @@ footer {
     class="modal-title"
     id="modalTitle"
 >
+
 </div>
+
 
 </div>
 
@@ -1915,8 +2374,13 @@ Liga Record - Craques de Bar © 2026
 
 </footer>
 
+
 </div>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
@@ -1927,24 +2391,33 @@ Liga Record - Craques de Bar © 2026
 
 const leagueRows =
     document.querySelectorAll(
-        "table:not(#liga-honra) tbody tr"
+        "tbody tr"
     );
 
 
 leagueRows.forEach(row => {
 
+
     const posicaoAtual =
         parseInt(
-            row.getAttribute("data-posicao")
+            row.getAttribute(
+                "data-posicao"
+            )
         );
+
 
     const posicaoAnterior =
         parseInt(
-            row.getAttribute("data-anterior")
+            row.getAttribute(
+                "data-anterior"
+            )
         );
 
+
     const tendencia =
-        row.querySelector(".tendencia");
+        row.querySelector(
+            ".tendencia"
+        );
 
 
     if (
@@ -1959,215 +2432,349 @@ leagueRows.forEach(row => {
 
 
     const diferenca =
-        posicaoAnterior - posicaoAtual;
+        posicaoAnterior -
+        posicaoAtual;
 
 
     if (diferenca > 0) {
 
-        tendencia.classList.add("subida");
+
+        tendencia.classList.add(
+            "subida"
+        );
+
 
         tendencia.innerHTML =
             "▲ " + diferenca;
 
+
     }
+
 
     else if (diferenca < 0) {
 
-        tendencia.classList.add("descida");
+
+        tendencia.classList.add(
+            "descida"
+        );
+
 
         tendencia.innerHTML =
-            "▼ " + Math.abs(diferenca);
+            "▼ " +
+            Math.abs(
+                diferenca
+            );
+
 
     }
 
+
     else {
 
-        tendencia.classList.add("mantem");
+
+        tendencia.classList.add(
+            "mantem"
+        );
+
 
         tendencia.innerHTML =
             "▬";
 
+
     }
+
 
 });
 
 
 /* =========================
    ORDENAÇÃO AUTOMÁTICA
-   LIGA DE HONRA
+   DO QUADRO DE HONRA
 ========================= */
 
-function ordenarLigaDeHonra() {
+/*
+   CRITÉRIOS:
 
-    const tabela =
-        document.getElementById("liga-honra");
+   1º - 🥇 Títulos da 1ª Divisão
+   2º - 🏆 Total de títulos
+   3º - 🥇 Títulos da 2ª Divisão
+   4º - Part. (Participações)
+   5º - 🔻 Despromoções
 
-    const tbody =
-        tabela.querySelector("tbody");
+   Os critérios são avaliados
+   pela ordem indicada acima.
+*/
 
-    const linhas =
-        Array.from(
-            tbody.querySelectorAll("tr")
+
+const honraTabela =
+    document.querySelector(
+        ".honra-table-wrapper table"
+    );
+
+
+if (honraTabela) {
+
+
+    const honraBody =
+        honraTabela.querySelector(
+            "tbody"
         );
 
 
-    linhas.sort((a, b) => {
-
-        /* 1º CRITÉRIO
-           TÍTULOS DA 1ª DIVISÃO */
-
-        const titulosA =
-            Number(
-                a.querySelector(
-                    ".titulos-1div"
-                ).textContent
-            ) || 0;
-
-        const titulosB =
-            Number(
-                b.querySelector(
-                    ".titulos-1div"
-                ).textContent
-            ) || 0;
+    const linhasHonra =
+        Array.from(
+            honraBody.querySelectorAll(
+                "tr"
+            )
+        );
 
 
-        if (titulosA !== titulosB) {
+    linhasHonra.sort(
+        (a, b) => {
 
-            return titulosB - titulosA;
+
+            const celulasA =
+                a.querySelectorAll(
+                    "td"
+                );
+
+
+            const celulasB =
+                b.querySelectorAll(
+                    "td"
+                );
+
+
+            /*
+               1º CRITÉRIO
+               TÍTULOS DA 1ª DIVISÃO
+
+               Índice 6
+            */
+
+
+            const titulos1A =
+                Number(
+                    celulasA[6]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            const titulos1B =
+                Number(
+                    celulasB[6]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            if (
+                titulos1A !==
+                titulos1B
+            ) {
+
+
+                return (
+                    titulos1B -
+                    titulos1A
+                );
+
+
+            }
+
+
+            /*
+               2º CRITÉRIO
+               TOTAL DE TÍTULOS
+
+               Índice 5
+            */
+
+
+            const totalA =
+                Number(
+                    celulasA[5]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            const totalB =
+                Number(
+                    celulasB[5]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            if (
+                totalA !==
+                totalB
+            ) {
+
+
+                return (
+                    totalB -
+                    totalA
+                );
+
+
+            }
+
+
+            /*
+               3º CRITÉRIO
+               TÍTULOS DA 2ª DIVISÃO
+
+               Índice 8
+            */
+
+
+            const titulos2A =
+                Number(
+                    celulasA[8]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            const titulos2B =
+                Number(
+                    celulasB[8]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            if (
+                titulos2A !==
+                titulos2B
+            ) {
+
+
+                return (
+                    titulos2B -
+                    titulos2A
+                );
+
+
+            }
+
+
+            /*
+               4º CRITÉRIO
+               PARTICIPAÇÕES
+
+               Índice 2
+            */
+
+
+            const participacoesA =
+                Number(
+                    celulasA[2]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            const participacoesB =
+                Number(
+                    celulasB[2]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            if (
+                participacoesA !==
+                participacoesB
+            ) {
+
+
+                return (
+                    participacoesB -
+                    participacoesA
+                );
+
+
+            }
+
+
+            /*
+               5º E ÚLTIMO CRITÉRIO
+               DESPROMOÇÕES
+
+               Índice 10
+
+               Menos despromoções
+               fica acima.
+            */
+
+
+            const despromocoesA =
+                Number(
+                    celulasA[10]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            const despromocoesB =
+                Number(
+                    celulasB[10]
+                    .textContent
+                    .trim()
+                ) || 0;
+
+
+            return (
+                despromocoesA -
+                despromocoesB
+            );
+
 
         }
+    );
 
 
-        /* 2º CRITÉRIO
-           TOTAL DE TÍTULOS */
-
-        const totalA =
-            Number(
-                a.querySelector(
-                    ".total-titulos"
-                ).textContent
-            ) || 0;
-
-        const totalB =
-            Number(
-                b.querySelector(
-                    ".total-titulos"
-                ).textContent
-            ) || 0;
+    /*
+       RECOLOCAR AS LINHAS
+       PELA NOVA ORDEM
+    */
 
 
-        if (totalA !== totalB) {
-
-            return totalB - totalA;
-
-        }
-
-
-        /* 3º CRITÉRIO
-           2º LUGAR NA 1ª DIVISÃO */
-
-        const segundos1A =
-            Number(
-                a.querySelector(
-                    ".segundos-1div"
-                ).textContent
-            ) || 0;
-
-        const segundos1B =
-            Number(
-                b.querySelector(
-                    ".segundos-1div"
-                ).textContent
-            ) || 0;
-
-
-        if (segundos1A !== segundos1B) {
-
-            return segundos1B - segundos1A;
-
-        }
-
-
-        /* 4º CRITÉRIO
-           TÍTULOS DA 2ª DIVISÃO */
-
-        const titulos2A =
-            Number(
-                a.querySelector(
-                    ".titulos-2div"
-                ).textContent
-            ) || 0;
-
-        const titulos2B =
-            Number(
-                b.querySelector(
-                    ".titulos-2div"
-                ).textContent
-            ) || 0;
-
-
-        if (titulos2A !== titulos2B) {
-
-            return titulos2B - titulos2A;
-
-        }
-
-
-        /* 5º CRITÉRIO
-           2º LUGAR NA 2ª DIVISÃO */
-
-        const segundos2A =
-            Number(
-                a.querySelector(
-                    ".segundos-2div"
-                ).textContent
-            ) || 0;
-
-        const segundos2B =
-            Number(
-                b.querySelector(
-                    ".segundos-2div"
-                ).textContent
-            ) || 0;
-
-
-        if (segundos2A !== segundos2B) {
-
-            return segundos2B - segundos2A;
-
-        }
-
-
-        /* SE TUDO FOR IGUAL
-           MANTÉM A ORDEM ORIGINAL */
-
-        return 0;
-
-    });
-
-
-    /* RECOLOCA AS LINHAS
-       NA NOVA ORDEM */
-
-    linhas.forEach(
+    linhasHonra.forEach(
         (linha, index) => {
 
-            tbody.appendChild(linha);
+
+            /*
+               ATUALIZAR POSIÇÃO
+            */
+
 
             linha.querySelector(
                 ".posicao"
             ).textContent =
                 index + 1;
 
+
+            /*
+               ADICIONAR LINHA
+               À TABELA
+            */
+
+
+            honraBody.appendChild(
+                linha
+            );
+
+
         }
     );
 
+
 }
-
-
-/* EXECUTAR ORDENAÇÃO */
-
-ordenarLigaDeHonra();
 
 
 /* =========================
@@ -2179,15 +2786,18 @@ const modal =
         "historyModal"
     );
 
+
 const modalImages =
     document.getElementById(
         "modalImages"
     );
 
+
 const modalTitle =
     document.getElementById(
         "modalTitle"
     );
+
 
 const closeModal =
     document.getElementById(
@@ -2209,107 +2819,137 @@ const historyItems =
    ABRIR MODAL
 ========================= */
 
-historyItems.forEach(item => {
-
-    item.addEventListener(
-        "click",
-        function() {
-
-            const images =
-                this.getAttribute(
-                    "data-images"
-                );
-
-            const singleImage =
-                this.getAttribute(
-                    "data-image"
-                );
-
-            const title =
-                this.getAttribute(
-                    "data-title"
-                );
+historyItems.forEach(
+    item => {
 
 
-            modalImages.innerHTML =
-                "";
+        item.addEventListener(
+            "click",
+            function() {
 
 
-            if (images) {
-
-                const imageList =
-                    images.split(",");
-
-
-                imageList.forEach(
-                    imagePath => {
-
-                        if (
-                            !imagePath.trim()
-                        ) {
-                            return;
-                        }
-
-
-                        const img =
-                            document.createElement(
-                                "img"
-                            );
-
-
-                        img.src =
-                            imagePath.trim();
-
-                        img.alt =
-                            title;
-
-                        modalImages.appendChild(
-                            img
-                        );
-
-                    }
-                );
-
-            }
-
-
-            else if (singleImage) {
-
-                const img =
-                    document.createElement(
-                        "img"
+                const images =
+                    this.getAttribute(
+                        "data-images"
                     );
 
 
-                img.src =
-                    singleImage;
+                const singleImage =
+                    this.getAttribute(
+                        "data-image"
+                    );
 
-                img.alt =
+
+                const title =
+                    this.getAttribute(
+                        "data-title"
+                    );
+
+
+                modalImages.innerHTML =
+                    "";
+
+
+                if (images) {
+
+
+                    const imageList =
+                        images.split(
+                            ","
+                        );
+
+
+                    imageList.forEach(
+                        imagePath => {
+
+
+                            /*
+                               IGNORAR VALORES
+                               VAZIOS
+                            */
+
+
+                            if (
+                                !imagePath.trim()
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            const img =
+                                document.createElement(
+                                    "img"
+                                );
+
+
+                            img.src =
+                                imagePath.trim();
+
+
+                            img.alt =
+                                title;
+
+
+                            modalImages.appendChild(
+                                img
+                            );
+
+
+                        }
+                    );
+
+
+                }
+
+
+                else if (
+                    singleImage
+                ) {
+
+
+                    const img =
+                        document.createElement(
+                            "img"
+                        );
+
+
+                    img.src =
+                        singleImage;
+
+
+                    img.alt =
+                        title;
+
+
+                    modalImages.appendChild(
+                        img
+                    );
+
+
+                }
+
+
+                modalTitle.textContent =
                     title;
 
-                modalImages.appendChild(
-                    img
+
+                modal.classList.add(
+                    "active"
                 );
 
+
+                document.body.style.overflow =
+                    "hidden";
+
+
             }
+        );
 
 
-            modalTitle.textContent =
-                title;
-
-
-            modal.classList.add(
-                "active"
-            );
-
-
-            document.body.style.overflow =
-                "hidden";
-
-        }
-    );
-
-});
+    }
+);
 
 
 /* =========================
@@ -2318,20 +2958,26 @@ historyItems.forEach(item => {
 
 function fecharModal() {
 
+
     modal.classList.remove(
         "active"
     );
 
+
     modalImages.innerHTML =
         "";
+
 
     document.body.style.overflow =
         "";
 
+
 }
 
 
-/* BOTÃO X */
+/* =========================
+   BOTÃO X
+========================= */
 
 closeModal.addEventListener(
     "click",
@@ -2339,40 +2985,54 @@ closeModal.addEventListener(
 );
 
 
-/* CLICAR FORA */
+/* =========================
+   CLICAR FORA DA IMAGEM
+========================= */
 
 modal.addEventListener(
     "click",
     function(event) {
 
+
         if (
-            event.target === modal
+            event.target ===
+            modal
         ) {
+
 
             fecharModal();
 
+
         }
+
 
     }
 );
 
 
-/* TECLA ESC */
+/* =========================
+   TECLA ESC
+========================= */
 
 document.addEventListener(
     "keydown",
     function(event) {
 
+
         if (
-            event.key === "Escape" &&
+            event.key ===
+            "Escape" &&
             modal.classList.contains(
                 "active"
             )
         ) {
 
+
             fecharModal();
 
+
         }
+
 
     }
 );
@@ -2384,72 +3044,85 @@ document.addEventListener(
 ========================= */
 
 document
-.querySelectorAll(
-    "table:not(#liga-honra) tr[data-posicao]"
-)
-.forEach(linha => {
-
-    const posicao =
-        Number(
-            linha.dataset.posicao
-        );
-
-    const observacoes =
-        linha.querySelector(
-            ".observacoes"
-        );
+    .querySelectorAll(
+        "tr[data-posicao]"
+    )
+    .forEach(
+        linha => {
 
 
-    if (!observacoes) {
-        return;
-    }
+            const posicao =
+                Number(
+                    linha.dataset.posicao
+                );
 
 
-    const tabela =
-        linha.closest("table");
+            const observacoes =
+                linha.querySelector(
+                    ".observacoes"
+                );
 
 
-    if (
-        tabela.closest(
-            "#segunda-divisao"
-        )
-    ) {
-        return;
-    }
+            if (
+                !observacoes
+            ) {
+
+                return;
+
+            }
 
 
-    if (posicao === 1) {
+            if (
+                posicao === 1
+            ) {
 
-        observacoes.textContent =
-            "Camisola Oficial à escolha";
 
-    }
+                observacoes.textContent =
+                    "Camisola Oficial à escolha";
 
-    else if (posicao === 2) {
 
-        observacoes.textContent =
-            "Isento do Pagamento da Camisola";
+            }
 
-    }
 
-    else if (posicao === 13) {
+            else if (
+                posicao === 2
+            ) {
 
-        observacoes.textContent =
-            "Play-off";
 
-    }
+                observacoes.textContent =
+                    "Isento do Pagamento da Camisola";
 
-    else if (
-        posicao === 14 ||
-        posicao === 15
-    ) {
 
-        observacoes.textContent =
-            "+0€ por Despromoção à 🥈 2.ª Divisão";
+            }
 
-    }
 
-});
+            else if (
+                posicao === 13
+            ) {
+
+
+                observacoes.textContent =
+                    "Play-off";
+
+
+            }
+
+
+            else if (
+                posicao === 14 ||
+                posicao === 15
+            ) {
+
+
+                observacoes.textContent =
+                    "+0€ por Despromoção à 🥈 2.ª Divisão";
+
+
+            }
+
+
+        }
+    );
 
 
 /* =========================
@@ -2458,62 +3131,90 @@ document
 ========================= */
 
 document
-.querySelectorAll(
-    "#segunda-divisao tr[data-posicao]"
-)
-.forEach(linha => {
-
-    const posicao =
-        Number(
-            linha.dataset.posicao
-        );
-
-    const observacoes =
-        linha.querySelector(
-            ".observacoes"
-        );
+    .querySelectorAll(
+        "#segunda-divisao tr[data-posicao]"
+    )
+    .forEach(
+        linha => {
 
 
-    if (!observacoes) {
-        return;
-    }
+            const posicao =
+                Number(
+                    linha.dataset.posicao
+                );
 
 
-    if (posicao === 1) {
+            const observacoes =
+                linha.querySelector(
+                    ".observacoes"
+                );
 
-        observacoes.textContent =
-            "Prémio + Subida à 🏅 1.ª Divisão";
 
-    }
+            if (
+                !observacoes
+            ) {
 
-    else if (posicao === 2) {
+                return;
 
-        observacoes.textContent =
-            "Subida à 🏅 1.ª Divisão";
+            }
 
-    }
 
-    else if (posicao === 3) {
+            if (
+                posicao === 1
+            ) {
 
-        observacoes.textContent =
-            "Play-off";
 
-    }
+                observacoes.textContent =
+                    "Prémio + Subida à 🏅 1.ª Divisão";
 
-    else if (
-        posicao === 9 ||
-        posicao === 10
-    ) {
 
-        observacoes.textContent =
-            "Despromoção";
+            }
 
-    }
 
-});
+            else if (
+                posicao === 2
+            ) {
+
+
+                observacoes.textContent =
+                    "Subida à 🏅 1.ª Divisão";
+
+
+            }
+
+
+            else if (
+                posicao === 3
+            ) {
+
+
+                observacoes.textContent =
+                    "Play-off";
+
+
+            }
+
+
+            else if (
+                posicao === 9 ||
+                posicao === 10
+            ) {
+
+
+                observacoes.textContent =
+                    "Despromoção";
+
+
+            }
+
+
+        }
+    );
 
 
 </script>
 
+
 </body>
+
 </html>
