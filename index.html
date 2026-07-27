@@ -858,7 +858,7 @@ footer {
    SCROLL LIGA DE HONRA
 ========================= */
 
-.honra-table-wrapper {
+.table-wrapper {
 
     width: 100%;
 
@@ -869,7 +869,7 @@ footer {
 }
 
 
-.honra-table-wrapper table {
+.table-wrapper table {
 
     min-width: 1000px;
 
@@ -882,7 +882,7 @@ footer {
 
 @media (max-width: 700px) {
 
-    .honra-table-wrapper {
+    .table-wrapper {
 
         width: 100%;
 
@@ -897,7 +897,7 @@ footer {
     }
 
 
-    .honra-table-wrapper table {
+    .table-wrapper table {
 
         min-width: 1000px;
 
@@ -1122,6 +1122,7 @@ footer {
 </div>
 
 
+<div class="table-wrapper">
 <table>
 
 
@@ -1547,6 +1548,7 @@ footer {
 </tbody>
 
 </table>
+</div>
 
 </div>
 
@@ -1585,6 +1587,7 @@ footer {
 </div>
 
 
+<div class="table-wrapper">
 <table>
 
 
@@ -1935,6 +1938,7 @@ footer {
 </tbody>
 
 </table>
+</div>
 
 </div>
 
@@ -1970,7 +1974,7 @@ footer {
 </div>
 
 
-<div class="honra-table-wrapper">
+<div class="table-wrapper" id="honra-wrapper">
 
 
 <table>
@@ -2602,7 +2606,7 @@ leagueRows.forEach(row => {
 
 const honraTabela =
     document.querySelector(
-        ".honra-table-wrapper table"
+        "#honra-wrapper table"
     );
 
 
