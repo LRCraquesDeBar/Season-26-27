@@ -32,7 +32,7 @@ body {
 
     color: #1e293b;
 
-    padding: 40px 20px;
+    padding: 30px 15px;
 }
 
 
@@ -61,9 +61,9 @@ body {
 
     border-radius: 20px;
 
-    padding: 30px;
+    padding: 25px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     box-shadow:
         0 20px 50px rgba(0,0,0,0.25);
@@ -75,15 +75,15 @@ body {
 
 .logo {
 
-    width: 100px;
+    width: 90px;
 
-    height: 100px;
+    height: 90px;
 
     object-fit: contain;
 
     display: block;
 
-    margin: 0 auto 15px auto;
+    margin: 0 auto 12px auto;
 
     filter: drop-shadow(
         0 5px 8px rgba(0,0,0,0.15)
@@ -94,11 +94,11 @@ body {
 
 .header h1 {
 
-    font-size: 34px;
+    font-size: 32px;
 
     color: #0f172a;
 
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
 }
 
@@ -107,7 +107,7 @@ body {
 
     color: #64748b;
 
-    font-size: 15px;
+    font-size: 14px;
 
 }
 
@@ -124,20 +124,20 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 7px;
 
-    margin-top: 20px;
+    margin-top: 15px;
 
 }
 
 
 .legenda span {
 
-    padding: 8px 14px;
+    padding: 6px 11px;
 
     border-radius: 50px;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 600;
 
@@ -186,9 +186,9 @@ body {
 
     border-radius: 20px;
 
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
-    padding: 25px;
+    padding: 20px;
 
     box-shadow:
         0 20px 50px rgba(0,0,0,0.25);
@@ -208,18 +208,20 @@ body {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
+    flex-wrap: wrap;
 
 }
 
 
 .league-icon {
 
-    width: 45px;
+    width: 42px;
 
-    height: 45px;
+    height: 42px;
 
     display: flex;
 
@@ -235,16 +237,16 @@ body {
 
     color: white;
 
-    border-radius: 12px;
+    border-radius: 11px;
 
-    font-size: 22px;
+    font-size: 20px;
 
 }
 
 
 .league-title h2 {
 
-    font-size: 22px;
+    font-size: 21px;
 
     color: #0f172a;
 
@@ -253,7 +255,7 @@ body {
 
 .league-title p {
 
-    font-size: 13px;
+    font-size: 12px;
 
     color: #64748b;
 
@@ -264,30 +266,43 @@ body {
    TABELA
 ========================= */
 
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
 table {
 
     width: 100%;
 
     border-collapse: separate;
 
-    border-spacing: 0 6px;
+    border-spacing: 0 4px;
 
 }
 
 
 thead th {
 
-    padding: 12px;
+    padding: 9px 8px;
 
     color: #64748b;
 
-    font-size: 12px;
+    font-size: 11px;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 
     text-align: center;
+
+    white-space: nowrap;
 
 }
 
@@ -310,28 +325,32 @@ tbody tr {
 
 tbody tr:hover {
 
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,0.08);
+        0 4px 12px rgba(0,0,0,0.08);
 
 }
 
 
 td {
 
-    padding: 15px 12px;
+    padding: 10px 8px;
 
     text-align: center;
 
     background: #f8fafc;
+
+    font-size: 13px;
+
+    line-height: 1.2;
 
 }
 
 
 td:first-child {
 
-    border-radius: 10px 0 0 10px;
+    border-radius: 8px 0 0 8px;
 
     text-align: center;
 
@@ -340,7 +359,7 @@ td:first-child {
 
 td:last-child {
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 8px 8px 0;
 
 }
 
@@ -351,13 +370,13 @@ td:last-child {
 
 .posicao {
 
-    font-size: 16px;
+    font-size: 14px;
 
     font-weight: 800;
 
     color: #64748b;
 
-    width: 60px;
+    width: 45px;
 
 }
 
@@ -374,6 +393,8 @@ td:last-child {
 
     text-align: left;
 
+    white-space: nowrap;
+
 }
 
 
@@ -383,7 +404,7 @@ td:last-child {
 
 .pontos {
 
-    font-size: 17px;
+    font-size: 15px;
 
     font-weight: 800;
 
@@ -434,7 +455,7 @@ td:last-child {
 
 .tendencia {
 
-    font-size: 18px;
+    font-size: 15px;
 
     font-weight: bold;
 
@@ -465,6 +486,145 @@ td:last-child {
 
 
 /* =========================
+   OBSERVAÇÕES
+========================= */
+
+.observacoes {
+
+    font-size: 12px;
+
+    line-height: 1.3;
+
+    min-width: 180px;
+
+}
+
+
+/* =========================
+   REGRAS E ANÚNCIOS
+========================= */
+
+.rules-card {
+
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef2ff
+    );
+
+    border: 1px solid #e2e8f0;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+}
+
+
+.rules-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.rules-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 17px;
+
+}
+
+
+.rules-header h3 {
+
+    font-size: 17px;
+
+    color: #0f172a;
+
+}
+
+
+.rules-content {
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.rules-content p {
+
+    margin-bottom: 6px;
+
+}
+
+
+.rules-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.rules-content strong {
+
+    color: #0f172a;
+
+}
+
+
+.rules-content ul {
+
+    margin:
+
+        6px
+
+        0
+
+        8px
+
+        20px;
+
+}
+
+
+.rules-content li {
+
+    margin-bottom: 4px;
+
+}
+
+
+/* =========================
    LOG HISTORY
 ========================= */
 
@@ -474,11 +634,11 @@ td:last-child {
 
     border-radius: 20px;
 
-    padding: 25px;
+    padding: 20px;
 
-    margin-top: 0px;
+    margin-top: 0;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     box-shadow:
         0 20px 50px rgba(0,0,0,0.25);
@@ -492,18 +652,18 @@ td:last-child {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
 }
 
 
 .history-icon {
 
-    width: 45px;
+    width: 42px;
 
-    height: 45px;
+    height: 42px;
 
     display: flex;
 
@@ -519,16 +679,16 @@ td:last-child {
 
     color: white;
 
-    border-radius: 12px;
+    border-radius: 11px;
 
-    font-size: 21px;
+    font-size: 20px;
 
 }
 
 
 .history-title h2 {
 
-    font-size: 22px;
+    font-size: 21px;
 
     color: #0f172a;
 
@@ -537,7 +697,7 @@ td:last-child {
 
 .history-title p {
 
-    font-size: 13px;
+    font-size: 12px;
 
     color: #64748b;
 
@@ -551,7 +711,7 @@ td:last-child {
     grid-template-columns:
         repeat(auto-fit, minmax(200px, 1fr));
 
-    gap: 15px;
+    gap: 12px;
 
 }
 
@@ -572,13 +732,15 @@ td:last-child {
 
     border: 1px solid #e2e8f0;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
-    padding: 18px;
+    padding: 15px;
 
     color: #0f172a;
 
     font-weight: 700;
+
+    font-size: 14px;
 
     cursor: pointer;
 
@@ -592,12 +754,12 @@ td:last-child {
 
 .history-item:hover {
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
     background: #ffffff;
 
     box-shadow:
-        0 8px 20px rgba(0,0,0,0.10);
+        0 6px 15px rgba(0,0,0,0.10);
 
 }
 
@@ -606,7 +768,7 @@ td:last-child {
 
     color: #2563eb;
 
-    font-size: 20px;
+    font-size: 19px;
 
 }
 
@@ -847,31 +1009,20 @@ footer {
 
     color: rgba(255,255,255,0.6);
 
-    font-size: 13px;
+    font-size: 12px;
 
-    margin-top: 20px;
+    margin-top: 15px;
 
 }
 
 
 /* =========================
-   SCROLL LIGA DE HONRA
+   LIGA DE HONRA
 ========================= */
 
-.table-wrapper {
+#honra-wrapper table {
 
-    width: 100%;
-
-    overflow-x: auto;
-
-    -webkit-overflow-scrolling: touch;
-
-}
-
-
-.table-wrapper table {
-
-    min-width: 1000px;
+    min-width: 950px;
 
 }
 
@@ -881,6 +1032,74 @@ footer {
 ========================= */
 
 @media (max-width: 700px) {
+
+    body {
+
+        padding: 15px 8px;
+
+    }
+
+    .header {
+
+        padding: 20px 12px;
+
+    }
+
+    .logo {
+
+        width: 80px;
+
+        height: 80px;
+
+    }
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+    .header p {
+
+        font-size: 13px;
+
+    }
+
+    .league-card {
+
+        padding: 15px 12px;
+
+        margin-bottom: 20px;
+
+    }
+
+    .league-title {
+
+        margin-bottom: 12px;
+
+    }
+
+    .league-title h2 {
+
+        font-size: 19px;
+
+    }
+
+    .legenda {
+
+        width: 100%;
+
+        margin-top: 8px;
+
+    }
+
+    .legenda span {
+
+        font-size: 11px;
+
+        padding: 5px 9px;
+
+    }
 
     .table-wrapper {
 
@@ -892,63 +1111,22 @@ footer {
 
         -webkit-overflow-scrolling: touch;
 
-        padding-bottom: 8px;
+        padding-bottom: 6px;
 
     }
-
 
     .table-wrapper table {
 
-        min-width: 1000px;
+        min-width: 950px;
 
     }
 
-}
+    th,
+    td {
 
+        padding: 9px 6px;
 
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media (max-width: 700px) {
-
-    body {
-
-        padding: 20px 10px;
-
-    }
-
-    .header {
-
-        padding: 25px 15px;
-
-    }
-
-    .logo {
-
-        width: 85px;
-
-        height: 85px;
-
-    }
-
-    .header h1 {
-
-        font-size: 26px;
-
-    }
-
-    .league-card {
-
-        padding: 15px;
-
-    }
-
-    th, td {
-
-        padding: 11px 6px;
-
-        font-size: 13px;
+        font-size: 12px;
 
     }
 
@@ -960,7 +1138,33 @@ footer {
 
     .equipa {
 
-        font-size: 13px;
+        font-size: 12px;
+
+    }
+
+    .observacoes {
+
+        font-size: 11px;
+
+    }
+
+    .rules-card {
+
+        padding: 15px;
+
+        margin-top: 15px;
+
+    }
+
+    .rules-header h3 {
+
+        font-size: 16px;
+
+    }
+
+    .rules-content {
+
+        font-size: 12px;
 
     }
 
@@ -1026,6 +1230,12 @@ footer {
 
     }
 
+    .rules-content {
+
+        font-size: 11px;
+
+    }
+
 }
 
 </style>
@@ -1060,6 +1270,7 @@ footer {
     Classificação geral da época 2026/2027
 </p>
 
+
 </div>
 
 
@@ -1067,7 +1278,7 @@ footer {
      PRIMEIRA DIVISÃO
 ========================= -->
 
-<div class="league-card">
+<div class="league-card" id="primeira-divisao">
 
 
 <div class="league-title">
@@ -1080,16 +1291,14 @@ footer {
 
 <div>
 
-
 <h2>Primeira Divisão</h2>
-
 
 <p>
     Classificação atual
 </p>
 
-
 </div>
+
 
 <div class="legenda">
 
@@ -1111,15 +1320,16 @@ footer {
 
 </div>
 
+
 </div>
 
 
 <div class="table-wrapper">
+
 <table>
 
 
 <thead>
-
 
 <tr>
 
@@ -1139,14 +1349,11 @@ footer {
 
 </tr>
 
-
 </thead>
 
 
 <tbody>
 
-
-<!-- EQUIPA 1 -->
 
 <tr
     class="champion"
@@ -1156,7 +1363,9 @@ footer {
 
 <td class="posicao">1</td>
 
-<td class="equipa">Aguazul FC [Roberto Pereira]</td>
+<td class="equipa">
+    Aguazul FC [Roberto Pereira]
+</td>
 
 <td>0</td>
 
@@ -1170,8 +1379,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 2 -->
 
 <tr
     class="top"
@@ -1181,7 +1388,9 @@ footer {
 
 <td class="posicao">2</td>
 
-<td class="equipa">Areiasteam [Fábio Areias]</td>
+<td class="equipa">
+    Areiasteam [Fábio Areias]
+</td>
 
 <td>0</td>
 
@@ -1195,8 +1404,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 3 -->
 
 <tr
     class="top"
@@ -1206,7 +1413,9 @@ footer {
 
 <td class="posicao">3</td>
 
-<td class="equipa">Castr0 FC [João Castro]</td>
+<td class="equipa">
+    Castr0 FC [João Castro]
+</td>
 
 <td>0</td>
 
@@ -1220,8 +1429,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 4 -->
 
 <tr
     data-posicao="4"
@@ -1230,7 +1437,9 @@ footer {
 
 <td class="posicao">4</td>
 
-<td class="equipa">Cafeteros FC [Nuno Monteiro]</td>
+<td class="equipa">
+    Cafeteros FC [Nuno Monteiro]
+</td>
 
 <td>0</td>
 
@@ -1244,8 +1453,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 5 -->
 
 <tr
     data-posicao="5"
@@ -1254,7 +1461,9 @@ footer {
 
 <td class="posicao">5</td>
 
-<td class="equipa">Fontinhas F.C. [Paulo Alves]</td>
+<td class="equipa">
+    Fontinhas F.C. [Paulo Alves]
+</td>
 
 <td>0</td>
 
@@ -1268,8 +1477,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 6 -->
 
 <tr
     data-posicao="6"
@@ -1278,7 +1485,9 @@ footer {
 
 <td class="posicao">6</td>
 
-<td class="equipa">M. Carvalho [Marco Carvalho]</td>
+<td class="equipa">
+    M. Carvalho [Marco Carvalho]
+</td>
 
 <td>0</td>
 
@@ -1292,8 +1501,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 7 -->
 
 <tr
     data-posicao="7"
@@ -1302,7 +1509,9 @@ footer {
 
 <td class="posicao">7</td>
 
-<td class="equipa">SL Salgueiral City [Paulo Martins]</td>
+<td class="equipa">
+    SL Salgueiral City [Paulo Martins]
+</td>
 
 <td>0</td>
 
@@ -1316,8 +1525,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 8 -->
 
 <tr
     data-posicao="8"
@@ -1326,7 +1533,9 @@ footer {
 
 <td class="posicao">8</td>
 
-<td class="equipa">Brindeiral FC [Ruben Lima]</td>
+<td class="equipa">
+    Brindeiral FC [Ruben Lima]
+</td>
 
 <td>0</td>
 
@@ -1340,8 +1549,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 9 -->
 
 <tr
     data-posicao="9"
@@ -1350,7 +1557,9 @@ footer {
 
 <td class="posicao">9</td>
 
-<td class="equipa">Titularfut [Rui Meneses]</td>
+<td class="equipa">
+    Titularfut [Rui Meneses]
+</td>
 
 <td>0</td>
 
@@ -1364,8 +1573,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 10 -->
 
 <tr
     data-posicao="10"
@@ -1374,7 +1581,9 @@ footer {
 
 <td class="posicao">10</td>
 
-<td class="equipa">Subyka FC [Tiago Rocha]</td>
+<td class="equipa">
+    Subyka FC [Tiago Rocha]
+</td>
 
 <td>0</td>
 
@@ -1388,8 +1597,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 11 -->
 
 <tr
     data-posicao="11"
@@ -1398,7 +1605,9 @@ footer {
 
 <td class="posicao">11</td>
 
-<td class="equipa">Bruno Silva F.C. [Bruno Silva]</td>
+<td class="equipa">
+    Bruno Silva F.C. [Bruno Silva]
+</td>
 
 <td>0</td>
 
@@ -1412,8 +1621,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 12 -->
 
 <tr
     data-posicao="12"
@@ -1422,7 +1629,9 @@ footer {
 
 <td class="posicao">12</td>
 
-<td class="equipa">Limão [Bruno Lima]</td>
+<td class="equipa">
+    Limão [Bruno Lima]
+</td>
 
 <td>0</td>
 
@@ -1436,8 +1645,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 13 -->
 
 <tr
     data-posicao="13"
@@ -1446,7 +1653,9 @@ footer {
 
 <td class="posicao">13</td>
 
-<td class="equipa">Rubronegros [Oldemiro Monteiro]</td>
+<td class="equipa">
+    Rubronegros [Oldemiro Monteiro]
+</td>
 
 <td>0</td>
 
@@ -1460,8 +1669,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 14 -->
 
 <tr
     class="playoff"
@@ -1471,7 +1678,9 @@ footer {
 
 <td class="posicao">14</td>
 
-<td class="equipa">Dragon@Force [Paulo Areias]</td>
+<td class="equipa">
+    Dragon@Force [Paulo Areias]
+</td>
 
 <td>0</td>
 
@@ -1485,8 +1694,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 15 -->
 
 <tr
     class="relegation"
@@ -1496,7 +1703,9 @@ footer {
 
 <td class="posicao">15</td>
 
-<td class="equipa">PedrosoSLB [Bruno Pedroso]</td>
+<td class="equipa">
+    PedrosoSLB [Bruno Pedroso]
+</td>
 
 <td>0</td>
 
@@ -1510,8 +1719,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 16 -->
 
 <tr
     class="relegation"
@@ -1521,7 +1728,9 @@ footer {
 
 <td class="posicao">16</td>
 
-<td class="equipa">Rocha FC [Tiago Rocha] *Provisório</td>
+<td class="equipa">
+    Rocha FC [Tiago Rocha] *Provisório
+</td>
 
 <td>0</td>
 
@@ -1535,10 +1744,74 @@ footer {
 
 </tr>
 
+
 </tbody>
 
 </table>
+
 </div>
+
+
+<!-- =========================
+     REGRAS E ANÚNCIOS
+     PRIMEIRA DIVISÃO
+========================= -->
+
+<div class="rules-card">
+
+
+<div class="rules-header">
+
+
+<div class="rules-icon">
+    📢
+</div>
+
+
+<h3>
+    Regras e Anúncios — 1.ª Divisão
+</h3>
+
+
+</div>
+
+
+<div class="rules-content">
+
+
+<p>
+    <strong>📌 Regras:</strong>
+</p>
+
+
+<ul>
+
+<li>
+    Coloca aqui a primeira regra da liga.
+</li>
+
+<li>
+    Coloca aqui a segunda regra da liga.
+</li>
+
+<li>
+    Coloca aqui outras informações importantes.
+</li>
+
+</ul>
+
+
+<p>
+    <strong>📢 Anúncios:</strong>
+    Coloca aqui os anúncios ou novidades da 1.ª Divisão.
+</p>
+
+
+</div>
+
+
+</div>
+
 
 </div>
 
@@ -1565,13 +1838,12 @@ footer {
 
 <h2>Segunda Divisão</h2>
 
-
 <p>
     Classificação atual
 </p>
 
-
 </div>
+
 
 <div class="legenda">
 
@@ -1588,20 +1860,21 @@ footer {
     </span>
 
     <span class="legend-relegation">
-        🔴 - Despromoção
+        🔴 Despromoção
     </span>
 
 </div>
+
 
 </div>
 
 
 <div class="table-wrapper">
+
 <table>
 
 
 <thead>
-
 
 <tr>
 
@@ -1621,14 +1894,11 @@ footer {
 
 </tr>
 
-
 </thead>
 
 
 <tbody>
 
-
-<!-- EQUIPA 1 -->
 
 <tr
     class="champion"
@@ -1638,7 +1908,9 @@ footer {
 
 <td class="posicao">1</td>
 
-<td class="equipa">----- [Alex Rocha]</td>
+<td class="equipa">
+    ----- [Alex Rocha]
+</td>
 
 <td>0</td>
 
@@ -1652,8 +1924,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 2 -->
 
 <tr
     class="top"
@@ -1663,7 +1933,9 @@ footer {
 
 <td class="posicao">2</td>
 
-<td class="equipa">Os Tapa Buracos [Pedro Pereira]</td>
+<td class="equipa">
+    Os Tapa Buracos [Pedro Pereira]
+</td>
 
 <td>0</td>
 
@@ -1677,8 +1949,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 3 -->
 
 <tr
     class="playoff"
@@ -1688,7 +1958,9 @@ footer {
 
 <td class="posicao">3</td>
 
-<td class="equipa">SC Barcelos [Mário Barcelos]</td>
+<td class="equipa">
+    SC Barcelos [Mário Barcelos]
+</td>
 
 <td>0</td>
 
@@ -1702,8 +1974,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 4 -->
 
 <tr
     data-posicao="4"
@@ -1712,7 +1982,9 @@ footer {
 
 <td class="posicao">4</td>
 
-<td class="equipa">JP FC [João Pedro]</td>
+<td class="equipa">
+    JP FC [João Pedro]
+</td>
 
 <td>0</td>
 
@@ -1726,8 +1998,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 5 -->
 
 <tr
     data-posicao="5"
@@ -1736,7 +2006,9 @@ footer {
 
 <td class="posicao">5</td>
 
-<td class="equipa">Areeiro FC [Wilson Fagundes]</td>
+<td class="equipa">
+    Areeiro FC [Wilson Fagundes]
+</td>
 
 <td>0</td>
 
@@ -1750,8 +2022,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 6 -->
 
 <tr
     data-posicao="6"
@@ -1760,7 +2030,9 @@ footer {
 
 <td class="posicao">6</td>
 
-<td class="equipa">Clube Meneses [Paulo Meneses]</td>
+<td class="equipa">
+    Clube Meneses [Paulo Meneses]
+</td>
 
 <td>0</td>
 
@@ -1774,8 +2046,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 7 -->
 
 <tr
     data-posicao="7"
@@ -1784,7 +2054,9 @@ footer {
 
 <td class="posicao">7</td>
 
-<td class="equipa">ImportéJantar FC [Flávio Rocha]</td>
+<td class="equipa">
+    ImportéJantar FC [Flávio Rocha]
+</td>
 
 <td>0</td>
 
@@ -1798,8 +2070,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 8 -->
 
 <tr
     data-posicao="8"
@@ -1808,7 +2078,9 @@ footer {
 
 <td class="posicao">8</td>
 
-<td class="equipa">CAJAF FC [André Monteiro]</td>
+<td class="equipa">
+    CAJAF FC [André Monteiro]
+</td>
 
 <td>0</td>
 
@@ -1822,8 +2094,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 9 -->
 
 <tr
     data-posicao="9"
@@ -1832,7 +2102,9 @@ footer {
 
 <td class="posicao">9</td>
 
-<td class="equipa">Caganda Equipa 2025! [Marco Martins]</td>
+<td class="equipa">
+    Caganda Equipa 2025! [Marco Martins]
+</td>
 
 <td>0</td>
 
@@ -1846,8 +2118,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 10 -->
 
 <tr
     data-posicao="10"
@@ -1856,7 +2126,9 @@ footer {
 
 <td class="posicao">10</td>
 
-<td class="equipa">MyTeamFC [Bruno Ávila]</td>
+<td class="equipa">
+    MyTeamFC [Bruno Ávila]
+</td>
 
 <td>0</td>
 
@@ -1870,8 +2142,6 @@ footer {
 
 </tr>
 
-   
-<!-- EQUIPA 11 -->
 
 <tr
     data-posicao="11"
@@ -1880,7 +2150,9 @@ footer {
 
 <td class="posicao">11</td>
 
-<td class="equipa">Tiago F.C. [Tiago Fagundes]</td>
+<td class="equipa">
+    Tiago F.C. [Tiago Fagundes]
+</td>
 
 <td>0</td>
 
@@ -1894,8 +2166,6 @@ footer {
 
 </tr>
 
-   
-<!-- EQUIPA 12 -->
 
 <tr
     class="relegation"
@@ -1905,7 +2175,9 @@ footer {
 
 <td class="posicao">12</td>
 
-<td class="equipa">TitxinoTeam [Márcio Rocha]</td>
+<td class="equipa">
+    TitxinoTeam [Márcio Rocha]
+</td>
 
 <td>0</td>
 
@@ -1919,8 +2191,6 @@ footer {
 
 </tr>
 
-   
-<!-- EQUIPA 13 -->
 
 <tr
     class="relegation"
@@ -1930,7 +2200,9 @@ footer {
 
 <td class="posicao">13</td>
 
-<td class="equipa">Kelvin92 [Cássio Frias]</td>
+<td class="equipa">
+    Kelvin92 [Cássio Frias]
+</td>
 
 <td>0</td>
 
@@ -1943,11 +2215,75 @@ footer {
 <td class="observacoes"></td>
 
 </tr>
-   
+
+
 </tbody>
 
 </table>
+
 </div>
+
+
+<!-- =========================
+     REGRAS E ANÚNCIOS
+     SEGUNDA DIVISÃO
+========================= -->
+
+<div class="rules-card">
+
+
+<div class="rules-header">
+
+
+<div class="rules-icon">
+    📢
+</div>
+
+
+<h3>
+    Regras e Anúncios — 2.ª Divisão
+</h3>
+
+
+</div>
+
+
+<div class="rules-content">
+
+
+<p>
+    <strong>📌 Regras:</strong>
+</p>
+
+
+<ul>
+
+<li>
+    Coloca aqui a primeira regra da 2.ª Divisão.
+</li>
+
+<li>
+    Coloca aqui a segunda regra da 2.ª Divisão.
+</li>
+
+<li>
+    Coloca aqui outras informações importantes.
+</li>
+
+</ul>
+
+
+<p>
+    <strong>📢 Anúncios:</strong>
+    Coloca aqui os anúncios ou novidades da 2.ª Divisão.
+</p>
+
+
+</div>
+
+
+</div>
+
 
 </div>
 
@@ -1971,11 +2307,9 @@ footer {
 
 <h2>Liga de Honra</h2>
 
-
 <p>
     Histórico geral das equipas
 </p>
-
 
 </div>
 
@@ -1990,7 +2324,6 @@ footer {
 
 
 <thead>
-
 
 <tr>
 
@@ -2018,14 +2351,11 @@ footer {
 
 </tr>
 
-
 </thead>
 
 
 <tbody>
 
-
-<!-- EQUIPA 1 -->
 
 <tr>
 
@@ -2054,8 +2384,6 @@ footer {
 </tr>
 
 
-<!-- EQUIPA 2 -->
-
 <tr>
 
 <td class="posicao">2</td>
@@ -2082,8 +2410,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 3 -->
 
 <tr>
 
@@ -2112,8 +2438,6 @@ footer {
 </tr>
 
 
-<!-- EQUIPA 4 -->
-
 <tr>
 
 <td class="posicao">4</td>
@@ -2140,8 +2464,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 5 -->
 
 <tr>
 
@@ -2170,8 +2492,6 @@ footer {
 </tr>
 
 
-<!-- EQUIPA 6 -->
-
 <tr>
 
 <td class="posicao">6</td>
@@ -2198,8 +2518,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 7 -->
 
 <tr>
 
@@ -2228,8 +2546,6 @@ footer {
 </tr>
 
 
-<!-- EQUIPA 8 -->
-
 <tr>
 
 <td class="posicao">8</td>
@@ -2257,8 +2573,6 @@ footer {
 </tr>
 
 
-<!-- EQUIPA 9 -->
-
 <tr>
 
 <td class="posicao">9</td>
@@ -2285,8 +2599,6 @@ footer {
 
 </tr>
 
-
-<!-- EQUIPA 10 -->
 
 <tr>
 
@@ -2341,14 +2653,11 @@ footer {
 
 <div>
 
-
 <h2>ARQUIVO</h2>
-
 
 <p>
     Consulta as classificações das épocas anteriores
 </p>
-
 
 </div>
 
@@ -2358,8 +2667,6 @@ footer {
 
 <div class="history-grid">
 
-
-<!-- 2025 / 2026 -->
 
 <div
     class="history-item"
@@ -2381,8 +2688,6 @@ footer {
 </div>
 
 
-<!-- 2024 / 2025 -->
-
 <div
     class="history-item"
     data-image="classificacao-2024-2025.jpg"
@@ -2402,8 +2707,6 @@ footer {
 
 </div>
 
-
-<!-- 2023 / 2024 -->
 
 <div
     class="history-item"
@@ -2485,10 +2788,6 @@ Liga Record - Craques de Bar © 2026
 </div>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
 
@@ -2498,7 +2797,7 @@ Liga Record - Craques de Bar © 2026
 
 const leagueRows =
     document.querySelectorAll(
-        "tbody tr"
+        "#primeira-divisao tr[data-posicao], #segunda-divisao tr[data-posicao]"
     );
 
 
@@ -2599,20 +2898,6 @@ leagueRows.forEach(row => {
    DO QUADRO DE HONRA
 ========================= */
 
-/*
-   CRITÉRIOS:
-
-   1º - 🥇 Títulos da 1ª Divisão
-   2º - 🏆 Total de títulos
-   3º - 🥇 Títulos da 2ª Divisão
-   4º - Part. (Participações)
-   5º - 🔻 Despromoções
-
-   Os critérios são avaliados
-   pela ordem indicada acima.
-*/
-
-
 const honraTabela =
     document.querySelector(
         "#honra-wrapper table"
@@ -2652,14 +2937,6 @@ if (honraTabela) {
                 );
 
 
-            /*
-               1º CRITÉRIO
-               TÍTULOS DA 1ª DIVISÃO
-
-               Índice 6
-            */
-
-
             const titulos1A =
                 Number(
                     celulasA[6]
@@ -2681,22 +2958,12 @@ if (honraTabela) {
                 titulos1B
             ) {
 
-
                 return (
                     titulos1B -
                     titulos1A
                 );
 
-
             }
-
-
-            /*
-               2º CRITÉRIO
-               TOTAL DE TÍTULOS
-
-               Índice 5
-            */
 
 
             const totalA =
@@ -2720,22 +2987,12 @@ if (honraTabela) {
                 totalB
             ) {
 
-
                 return (
                     totalB -
                     totalA
                 );
 
-
             }
-
-
-            /*
-               3º CRITÉRIO
-               TÍTULOS DA 2ª DIVISÃO
-
-               Índice 8
-            */
 
 
             const titulos2A =
@@ -2759,22 +3016,12 @@ if (honraTabela) {
                 titulos2B
             ) {
 
-
                 return (
                     titulos2B -
                     titulos2A
                 );
 
-
             }
-
-
-            /*
-               4º CRITÉRIO
-               PARTICIPAÇÕES
-
-               Índice 2
-            */
 
 
             const participacoesA =
@@ -2798,25 +3045,12 @@ if (honraTabela) {
                 participacoesB
             ) {
 
-
                 return (
                     participacoesB -
                     participacoesA
                 );
 
-
             }
-
-
-            /*
-               5º E ÚLTIMO CRITÉRIO
-               DESPROMOÇÕES
-
-               Índice 10
-
-               Menos despromoções
-               fica acima.
-            */
 
 
             const despromocoesA =
@@ -2845,31 +3079,14 @@ if (honraTabela) {
     );
 
 
-    /*
-       RECOLOCAR AS LINHAS
-       PELA NOVA ORDEM
-    */
-
-
     linhasHonra.forEach(
         (linha, index) => {
-
-
-            /*
-               ATUALIZAR POSIÇÃO
-            */
 
 
             linha.querySelector(
                 ".posicao"
             ).textContent =
                 index + 1;
-
-
-            /*
-               ADICIONAR LINHA
-               À TABELA
-            */
 
 
             honraBody.appendChild(
@@ -2968,12 +3185,6 @@ historyItems.forEach(
 
                     imageList.forEach(
                         imagePath => {
-
-
-                            /*
-                               IGNORAR VALORES
-                               VAZIOS
-                            */
 
 
                             if (
@@ -3082,19 +3293,11 @@ function fecharModal() {
 }
 
 
-/* =========================
-   BOTÃO X
-========================= */
-
 closeModal.addEventListener(
     "click",
     fecharModal
 );
 
-
-/* =========================
-   CLICAR FORA DA IMAGEM
-========================= */
 
 modal.addEventListener(
     "click",
@@ -3116,10 +3319,6 @@ modal.addEventListener(
     }
 );
 
-
-/* =========================
-   TECLA ESC
-========================= */
 
 document.addEventListener(
     "keydown",
@@ -3152,7 +3351,7 @@ document.addEventListener(
 
 document
     .querySelectorAll(
-        "tr[data-posicao]"
+        "#primeira-divisao tr[data-posicao]"
     )
     .forEach(
         linha => {
@@ -3185,7 +3384,7 @@ document
 
 
                 observacoes.textContent =
-                    "🥇 Campeão da 1.ª Divisão + Camisola Oficial à escolha + Isento de Pagamento da Camisola ";
+                    "🥇 Campeão da 1.ª Divisão + Camisola Oficial à escolha + Isento de Pagamento da Camisola";
 
 
             }
