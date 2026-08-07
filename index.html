@@ -1295,7 +1295,7 @@ footer {
 
 <div>
 
-<h2>Primeira Divisão</h2>
+<h2>Liga Principal</h2>
 
 <p>
     Classificação atual
@@ -1749,165 +1749,7 @@ footer {
 </tr>
 
 
-</tbody>
 
-</table>
-
-</div>
-
-
-<!-- =========================
-     REGRAS E ANÚNCIOS
-     PRIMEIRA DIVISÃO
-========================= -->
-
-<div class="rules-card">
-
-
-<div class="rules-header">
-
-
-<div class="rules-icon">
-    📢
-</div>
-
-
-<h3>
-    Informações, Regras e Anúncios — 1.ª Divisão
-</h3>
-
-
-</div>
-
-
-<div class="rules-content">
-
-
-<p>
-    <strong>📌 Informações & Regras:</strong>
-</p>
-
-
-<ul>
-   
-<li>
-    <strong>MVP:</strong> Corresponde ao número de vezes que uma equipa terminou em 1.º lugar na Classificação Geral da Liga Record, considerando todos os participantes.
-</li>
-   
-<li>
-   <strong>Critério de Desempate:</strong> Em caso de empate, o primeiro critério de desempate será o número de MVPs, seguido do número de pontos. Se o empate persistir, prevalece a equipa que estiver melhor classificada no Quadro de Honra.
-</li>
-   
-<li>
-    <strong>Regra do Play-off:</strong> Aplica-se o critério de desempate, mas não é considerado o Quadro de Honra. Nesse caso, a equipa que estiver na 1.ª Divisão desce à 2.ª Divisão e a equipa que estiver na 2.ª Divisão sobe à 1.ª Divisão.
-</li>
-
-</ul>
-
-
-<p>
-    <strong>📢 Anúncios:</strong>
-</p>
-
-<ul>
-
-<li>
-    <strong>*Provisório -</strong> Pode vir a descer para a 🥈 2.ª Divisão caso uma equipa do ano passado se inscreva este ano.
-</li>
-   
-</ul>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-<!-- =========================
-     SEGUNDA DIVISÃO
-========================= -->
-
-<div
-    class="league-card"
-    id="segunda-divisao"
->
-
-
-<div class="league-title">
-
-
-<div class="league-icon">
-    🥈
-</div>
-
-
-<div>
-
-<h2>Segunda Divisão</h2>
-
-<p>
-    Classificação atual
-</p>
-
-</div>
-
-
-<div class="legenda">
-
-    <span class="legend-champion">
-        🥇 Campeão + Subida
-    </span>
-
-    <span class="legend-top">
-        🟢 2.º Lugar - Subida
-    </span>
-
-    <span class="legend-playoff">
-        🟠 3.º Lugar - Play-off
-    </span>
-
-    <span class="legend-relegation">
-        🔴 Despromoção
-    </span>
-
-</div>
-
-
-</div>
-
-
-<div class="table-wrapper">
-
-<table>
-
-
-<thead>
-
-<tr>
-
-<th>Pos.</th>
-
-<th>Equipa</th>
-
-<th>Jornadas</th>
-
-<th>MVP</th>
-
-<th>Pontos</th>
-
-<th>Tendência</th>
-
-<th>Obs.</th>
-
-</tr>
-
-</thead>
-
-
-<tbody>
 
 
 <tr
@@ -2027,6 +1869,11 @@ footer {
 <td class="pontos">0</td>
 
 <td class="tendencia"></td>
+
+<td class="observacoes"></td>
+
+</tr>
+d>
 
 <td class="observacoes"></td>
 
@@ -2837,7 +2684,7 @@ Liga Record - Craques de Bar © 2026
 
 const leagueRows =
     document.querySelectorAll(
-        "#primeira-divisao tr[data-posicao], #segunda-divisao tr[data-posicao]"
+        "#primeira-divisao tr[data-posicao]"
     );
 
 
