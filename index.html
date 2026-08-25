@@ -2596,15 +2596,12 @@ const honraTabela =
         "#honra-wrapper table"
     );
 
-
 if (honraTabela) {
-
 
     const honraBody =
         honraTabela.querySelector(
             "tbody"
         );
-
 
     const linhasHonra =
         Array.from(
@@ -2613,42 +2610,34 @@ if (honraTabela) {
             )
         );
 
-
     linhasHonra.sort(
         (a, b) => {
 
-
             const celulasA =
-                a.querySelectorAll(
-                    "td"
-                );
-
+                a.querySelectorAll("td");
 
             const celulasB =
-                b.querySelectorAll(
-                    "td"
-                );
+                b.querySelectorAll("td");
 
+
+            /* =========================
+               1.º CRITÉRIO
+               🥇 1ª DIVISÃO
+            ========================= */
 
             const titulos1A =
                 Number(
-                    celulasA[6]
-                    .textContent
-                    .trim()
+                    celulasA[3].textContent.trim()
                 ) || 0;
-
 
             const titulos1B =
                 Number(
-                    celulasB[6]
-                    .textContent
-                    .trim()
+                    celulasB[3].textContent.trim()
                 ) || 0;
 
 
             if (
-                titulos1A !==
-                titulos1B
+                titulos1A !== titulos1B
             ) {
 
                 return (
@@ -2659,25 +2648,24 @@ if (honraTabela) {
             }
 
 
+            /* =========================
+               2.º CRITÉRIO
+               🏆 TOTAL
+            ========================= */
+
             const totalA =
                 Number(
-                    celulasA[5]
-                    .textContent
-                    .trim()
+                    celulasA[2].textContent.trim()
                 ) || 0;
-
 
             const totalB =
                 Number(
-                    celulasB[5]
-                    .textContent
-                    .trim()
+                    celulasB[2].textContent.trim()
                 ) || 0;
 
 
             if (
-                totalA !==
-                totalB
+                totalA !== totalB
             ) {
 
                 return (
@@ -2688,77 +2676,47 @@ if (honraTabela) {
             }
 
 
-            const titulos2A =
+            /* =========================
+               3.º CRITÉRIO
+               🥈 1ª DIVISÃO
+            ========================= */
+
+            const segundos1A =
                 Number(
-                    celulasA[8]
-                    .textContent
-                    .trim()
+                    celulasA[4].textContent.trim()
                 ) || 0;
 
-
-            const titulos2B =
+            const segundos1B =
                 Number(
-                    celulasB[8]
-                    .textContent
-                    .trim()
+                    celulasB[4].textContent.trim()
                 ) || 0;
 
 
             if (
-                titulos2A !==
-                titulos2B
+                segundos1A !== segundos1B
             ) {
 
                 return (
-                    titulos2B -
-                    titulos2A
+                    segundos1B -
+                    segundos1A
                 );
 
             }
 
 
-            const participacoesA =
-                Number(
-                    celulasA[2]
-                    .textContent
-                    .trim()
-                ) || 0;
-
-
-            const participacoesB =
-                Number(
-                    celulasB[2]
-                    .textContent
-                    .trim()
-                ) || 0;
-
-
-            if (
-                participacoesA !==
-                participacoesB
-            ) {
-
-                return (
-                    participacoesB -
-                    participacoesA
-                );
-
-            }
-
+            /* =========================
+               4.º CRITÉRIO
+               🔻 DESPROMOÇÕES
+            ========================= */
 
             const despromocoesA =
                 Number(
-                    celulasA[10]
-                    .textContent
-                    .trim()
+                    celulasA[5].textContent.trim()
                 ) || 0;
-
 
             const despromocoesB =
                 Number(
-                    celulasB[10]
-                    .textContent
-                    .trim()
+                    celulasB[5].textContent.trim()
                 ) || 0;
 
 
@@ -2767,9 +2725,30 @@ if (honraTabela) {
                 despromocoesB
             );
 
+        }
+    );
+
+
+    /* =========================
+       ATUALIZA POSIÇÕES
+    ========================= */
+
+    linhasHonra.forEach(
+        (linha, index) => {
+
+            linha.querySelector(
+                ".posicao"
+            ).textContent =
+                index + 1;
+
+            honraBody.appendChild(
+                linha
+            );
 
         }
     );
+
+}
 
 
     linhasHonra.forEach(
