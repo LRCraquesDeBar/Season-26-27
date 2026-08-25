@@ -2704,16 +2704,16 @@ if (primeiraDivisao) {
         if (posicao === 1) {
             linha.classList.add("champion");
         }
-        else if (posicao >= totalEquipas - 1) {
-            // Os 2 últimos lugares são sempre Ultra Despromoção.
+        else if (posicao >= 27) {
+            // Do 27.º ao 30.º: Ultra Despromoção (Vermelho).
             linha.classList.add("relegation");
         }
         else if (posicao >= 17) {
-            // Do 17.º lugar até ao lugar anterior aos 2 últimos: Play-off.
-            linha.classList.add("playoff");
+            // Do 17.º ao 26.º: sem cor.
+            // Não adicionar nenhuma classe.
         }
         else {
-            // 2.º até ao 16.º lugar (quando existirem).
+            // 2.º até ao 16.º lugar: Verde.
             linha.classList.add("top");
         }
     });
@@ -3323,17 +3323,15 @@ document
                     "Isento do Pagamento da Camisola";
 
             }
-            else if (posicao >= totalEquipas - 1) {
+            else if (posicao >= 27) {
 
                 observacoes.textContent =
-                    "Ultra Despromoção à 🥈 2.ª Divisão + 2x Pagamento da Camisola";
+                    "2x Pagamento da Camisola";
 
             }
             else if (posicao >= 17) {
 
-                observacoes.textContent =
-                    "Play-off";
-
+                observacoes.textContent = "";
             }
 
 
