@@ -2705,15 +2705,15 @@ if (primeiraDivisao) {
             linha.classList.add("champion");
         }
         else if (posicao >= 27) {
-            // Do 27.º ao 30.º: Ultra Despromoção (Vermelho).
+            // Do 27.º ao 30.º: Vermelho.
             linha.classList.add("relegation");
         }
         else if (posicao >= 17) {
             // Do 17.º ao 26.º: sem cor.
             // Não adicionar nenhuma classe.
         }
-        else {
-            // 2.º até ao 16.º lugar: Verde.
+        else (posicao >= 2 && posicao <= 5) {
+            // Do 2.º ao 5.º: Verde.
             linha.classList.add("top");
         }
     });
@@ -3317,7 +3317,7 @@ document
                     "🥇 Campeão da 1.ª Divisão + Camisola Oficial à escolha + Isento de Pagamento da Camisola";
 
             }
-            else if (posicao === 2 || posicao === 3) {
+            else if (posicao === 2 || posicao === 5) {
 
                 observacoes.textContent =
                     "Isento do Pagamento da Camisola";
