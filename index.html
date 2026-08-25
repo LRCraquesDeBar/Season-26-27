@@ -2591,24 +2591,86 @@ leagueRows.forEach(row => {
    DO QUADRO DE HONRA
 ========================= */
 
-const honraTabela =
-    document.querySelector(
-        "#honra-wrapper table"
-    );
+let estadoAnteriorHonra = "";
 
-if (honraTabela) {
+
+function ordenarQuadroDeHonra() {
+
+    const honraTabela =
+        document.querySelector(
+            "#honra-wrapper table"
+        );
+
+    if (!honraTabela) {
+        return;
+    }
+
 
     const honraBody =
         honraTabela.querySelector(
             "tbody"
         );
 
+    if (!honraBody) {
+        return;
+    }
+
+
     const linhasHonra =
         Array.from(
-            honraBody.querySelectorAll(
-                "tr"
-            )
+            honraBody.querySelectorAll("tr")
         );
+
+
+    /* =========================
+       GUARDAR ESTADO ATUAL
+       DOS VALORES
+    ========================= */
+
+    const novoEstado =
+        linhasHonra
+            .map(linha => {
+
+                const celulas =
+                    linha.querySelectorAll("td");
+
+                return [
+
+                    celulas[1].textContent.trim(),
+
+                    celulas[2].textContent.trim(),
+
+                    celulas[3].textContent.trim(),
+
+                    celulas[4].textContent.trim(),
+
+                    celulas[5].textContent.trim()
+
+                ].join("|");
+
+            })
+            .join("||");
+
+
+    /* Se nada mudou, não faz nada */
+
+    if (
+        novoEstado ===
+        estadoAnteriorHonra
+    ) {
+
+        return;
+
+    }
+
+
+    estadoAnteriorHonra =
+        novoEstado;
+
+
+    /* =========================
+       ORDENAR
+    ========================= */
 
     linhasHonra.sort(
         (a, b) => {
@@ -2620,38 +2682,33 @@ if (honraTabela) {
                 b.querySelectorAll("td");
 
 
-            /* =========================
-               1.º CRITÉRIO
-               🥇 1ª DIVISÃO
-            ========================= */
+            /* 🥇 Títulos */
 
-            const titulos1A =
+            const titulosA =
                 Number(
                     celulasA[3].textContent.trim()
                 ) || 0;
 
-            const titulos1B =
+            const titulosB =
                 Number(
                     celulasB[3].textContent.trim()
                 ) || 0;
 
 
             if (
-                titulos1A !== titulos1B
+                titulosA !==
+                titulosB
             ) {
 
                 return (
-                    titulos1B -
-                    titulos1A
+                    titulosB -
+                    titulosA
                 );
 
             }
 
 
-            /* =========================
-               2.º CRITÉRIO
-               🏆 TOTAL
-            ========================= */
+            /* 🏆 Total */
 
             const totalA =
                 Number(
@@ -2665,7 +2722,8 @@ if (honraTabela) {
 
 
             if (
-                totalA !== totalB
+                totalA !==
+                totalB
             ) {
 
                 return (
@@ -2676,53 +2734,48 @@ if (honraTabela) {
             }
 
 
-            /* =========================
-               3.º CRITÉRIO
-               🥈 1ª DIVISÃO
-            ========================= */
+            /* 🥈 Segundos lugares */
 
-            const segundos1A =
+            const segundosA =
                 Number(
                     celulasA[4].textContent.trim()
                 ) || 0;
 
-            const segundos1B =
+            const segundosB =
                 Number(
                     celulasB[4].textContent.trim()
                 ) || 0;
 
 
             if (
-                segundos1A !== segundos1B
+                segundosA !==
+                segundosB
             ) {
 
                 return (
-                    segundos1B -
-                    segundos1A
+                    segundosB -
+                    segundosA
                 );
 
             }
 
 
-            /* =========================
-               4.º CRITÉRIO
-               🔻 DESPROMOÇÕES
-            ========================= */
+            /* 🔻 Despromoções */
 
-            const despromocoesA =
+            const despA =
                 Number(
                     celulasA[5].textContent.trim()
                 ) || 0;
 
-            const despromocoesB =
+            const despB =
                 Number(
                     celulasB[5].textContent.trim()
                 ) || 0;
 
 
             return (
-                despromocoesA -
-                despromocoesB
+                despA -
+                despB
             );
 
         }
@@ -2730,7 +2783,7 @@ if (honraTabela) {
 
 
     /* =========================
-       ATUALIZA POSIÇÕES
+       ATUALIZAR POSIÇÕES
     ========================= */
 
     linhasHonra.forEach(
@@ -2751,24 +2804,43 @@ if (honraTabela) {
 }
 
 
-    linhasHonra.forEach(
-        (linha, index) => {
+/* =========================
+   PRIMEIRA EXECUÇÃO
+========================= */
+
+ordenarQuadroDeHonra();
 
 
-            linha.querySelector(
-                ".posicao"
-            ).textContent =
-                index + 1;
+/* =========================
+   OBSERVAR ALTERAÇÕES
+========================= */
 
-
-            honraBody.appendChild(
-                linha
-            );
-
-
-        }
+const honraBody =
+    document.querySelector(
+        "#honra-wrapper tbody"
     );
 
+
+if (honraBody) {
+
+    const observer =
+        new MutationObserver(
+            function() {
+
+                ordenarQuadroDeHonra();
+
+            }
+        );
+
+
+    observer.observe(
+        honraBody,
+        {
+            childList: true,
+            subtree: true,
+            characterData: true
+        }
+    );
 
 }
 
