@@ -2670,48 +2670,82 @@ Liga Record - Craques de Bar © 2026
 /* =========================
    CLASSIFICAÇÃO AUTOMÁTICA
    1.º = Campeão
-   2.º até 16.º = Verde
-   Depois = Play-off (Laranja)
-   2 últimos = Ultra Despromoção (Vermelho)
+   2.º ao 5.º = Verde
+   6.º ao 26.º = Sem cor
+   27.º ao 30.º = Despromoção (Vermelho)
 ========================= */
 
 const primeiraDivisao = document.querySelector("#primeira-divisao");
 
 if (primeiraDivisao) {
 
-    const tabelaPrincipal = primeiraDivisao.querySelector("tbody");
-    const equipasPrincipal = Array.from(
-        tabelaPrincipal.querySelectorAll("tr[data-posicao]")
+    const tabelaPrincipal =
+        primeiraDivisao.querySelector("tbody");
+
+    const equipasPrincipal =
+        Array.from(
+            tabelaPrincipal.querySelectorAll(
+                "tr[data-posicao]"
+            )
+        );
+
+    const totalEquipas =
+        equipasPrincipal.length;
+
+    equipasPrincipal.forEach(
+        (linha, index) => {
+
+            const posicao = index + 1;
+
+            linha.dataset.posicao =
+                posicao;
+
+            linha.querySelector(
+                ".posicao"
+            ).textContent = posicao;
+
+            // Limpa todas as cores anteriores
+            linha.classList.remove(
+                "champion",
+                "top",
+                "playoff",
+                "relegation"
+            );
+
+            if (posicao === 1) {
+
+                // 1.º lugar
+                linha.classList.add(
+                    "champion"
+                );
+
+            }
+            else if (
+                posicao >= 27
+            ) {
+
+                // 27.º ao 30.º
+                linha.classList.add(
+                    "relegation"
+                );
+
+            }
+            else if (
+                posicao >= 2 &&
+                posicao <= 5
+            ) {
+
+                // 2.º ao 5.º
+                linha.classList.add(
+                    "top"
+                );
+
+            }
+
+            // 6.º ao 26.º ficam sem qualquer cor
+
+        }
     );
-
-    const totalEquipas = equipasPrincipal.length;
-
-    equipasPrincipal.forEach((linha, index) => {
-
-        const posicao = index + 1;
-
-        linha.dataset.posicao = posicao;
-        linha.querySelector(".posicao").textContent = posicao;
-
-        // Limpa as classes antigas para evitar cores incorretas.
-        linha.classList.remove("champion", "top", "playoff", "relegation");
-
-        if (posicao === 1) {
-            linha.classList.add("champion");
-        }
-        else if (posicao >= 27) {
-            // Do 27.º ao 30.º: Vermelho.
-            linha.classList.add("relegation");
-        }
-        else if (posicao >= 17) {
-            // Do 17.º ao 26.º: sem cor.
-            // Não adicionar nenhuma classe.
-        }
-        else (posicao >= 2 && posicao <= 5) {
-            // Do 2.º ao 5.º: Verde.
-            linha.classList.add("top");
-        }
-    });
 }
 
 /* =========================
@@ -3279,56 +3313,46 @@ document
     .forEach(
         linha => {
 
-
             const posicao =
                 Number(
                     linha.dataset.posicao
                 );
-
 
             const observacoes =
                 linha.querySelector(
                     ".observacoes"
                 );
 
-
-            if (
-                !observacoes
-            ) {
-
+            if (!observacoes) {
                 return;
-
             }
 
-
-            const totalEquipas =
-                document.querySelectorAll(
-                    "#primeira-divisao tbody tr[data-posicao]"
-                ).length;
+            // Limpa primeiro qualquer observação anterior
+            observacoes.textContent = "";
 
             if (posicao === 1) {
 
                 observacoes.textContent =
-                    "🥇 Campeão da 1.ª Divisão + Camisola Oficial à escolha + Isento de Pagamento da Camisola";
+                    "🥇 Campeão da 1.ª Divisão";
 
             }
-            else if (posicao === 2 || posicao === 5) {
+            else if (
+                posicao >= 2 &&
+                posicao <= 5
+            ) {
 
                 observacoes.textContent =
                     "Isento do Pagamento da Camisola";
 
             }
-            else if (posicao >= 27) {
+            else if (
+                posicao >= 27
+            ) {
 
                 observacoes.textContent =
                     "2x Pagamento da Camisola";
 
             }
-            else if (posicao >= 17) {
-
-                observacoes.textContent = "";
-            }
-
 
         }
     );
